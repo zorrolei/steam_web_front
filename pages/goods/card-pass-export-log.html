@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <!-- datetimepicker -->
-    <link rel="stylesheet" href="../../bower_components/datetimepicker/datetimepicker.min.css">
+
+
     <!-- bootstrap-table -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-table/dist/bootstrap-table.min.css">
     <!-- sweetalert -->
@@ -122,11 +122,11 @@
                         <li>
                             <a href="../goods/card-pass-import-log.html">卡密导卡记录</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
                         </li>
                         <li>
-                            <a href="../goods/steam-account-list.html">steam账号列表</a>
+                            <a href="../goods/Steam-account-list.html">Steam账号列表</a>
                         </li>
                         <li>
                             <a href="../goods/account-alarm-settings.html">账户报警设置</a>
@@ -266,7 +266,7 @@
                             </div>
                             <div class="form-group margin-top-xs">
                                 <p class="form-control-static">取卡时间</p>
-                                <input type="text" class="form-control" id="daterange" style="min-width: 200px;">
+                                <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
                             </div>
                             <div class="form-group margin-top-xs">
                                 <button class="btn btn-danger">搜索</button>
@@ -311,7 +311,7 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>steam单机游戏</td>
+                                    <td>Steam单机游戏</td>
                                     <td>98</td>
                                     <td>88</td>
                                     <td>784561</td>
@@ -325,7 +325,7 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>steam单机游戏</td>
+                                    <td>Steam单机游戏</td>
                                     <td>98</td>
                                     <td>88</td>
                                     <td>784561</td>
@@ -339,7 +339,7 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>steam单机游戏</td>
+                                    <td>Steam单机游戏</td>
                                     <td>98</td>
                                     <td>88</td>
                                     <td>784561</td>
@@ -353,7 +353,7 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>steam单机游戏</td>
+                                    <td>Steam单机游戏</td>
                                     <td>98</td>
                                     <td>88</td>
                                     <td>784561</td>
@@ -367,7 +367,7 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>steam单机游戏</td>
+                                    <td>Steam单机游戏</td>
                                     <td>98</td>
                                     <td>88</td>
                                     <td>784561</td>
@@ -416,9 +416,9 @@
 <!-- date-range-picker -->
 <script src="../../bower_components/moment/min/moment.min.js"></script>
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datetimepicker -->
-<script src="../../bower_components/datetimepicker/datetimepicker.min.js"></script>
-<script src="../../bower_components/datetimepicker/datetimepicker.zh-CN.js"></script>
+
+
+
 <!-- bootstrap-table -->
 <script src="../../bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="../../bower_components/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
@@ -428,36 +428,34 @@
     $(function(){
 
         //Date range
-        $('#daterange').daterangepicker(
-            {
-                locale : {
-                    "format" : 'YYYY-MM-DD',
-                    "separator" : " - ",//
-                    "applyLabel" : "确定",
-                    "cancelLabel" : "取消",
-                    "fromLabel" : "起始时间",
-                    "toLabel" : "结束时间'",
-                    "customRangeLabel" : "自定义",
-                    "weekLabel" : "W",
-                    "daysOfWeek" : ["日", "一", "二", "三", "四", "五", "六"],
-                    "monthNames" : ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-                    "firstDay" : 1
-                },
-                ranges : {
-                    '今天' : [moment(), moment()],
-                    '昨天' : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                    '过去7天' : [moment().subtract(6, 'days'), moment()],
-                    '过去30天' : [moment().subtract(29, 'days'), moment()],
-                    '这个月' : [moment().startOf('month'), moment().endOf('month')],
-                    '上个月' : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                },
-                startDate : moment().subtract(29, 'days'),
-                endDate : moment()
+        $('#daterange').daterangepicker({
+            "timePicker": true,
+            "timePicker24Hour": true,
+            "timePickerSeconds": true,
+            locale : {
+                "format" : 'YYYY-MM-DD HH:mm:ss',
+                "separator" : " 至 ",//
+                "applyLabel" : "确定",
+                "cancelLabel" : "取消",
+                "fromLabel" : "起始时间",
+                "toLabel" : "结束时间'",
+                "customRangeLabel" : "自定义",
+                "weekLabel" : "W",
+                "daysOfWeek" : ["日", "一", "二", "三", "四", "五", "六"],
+                "monthNames" : ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                "firstDay" : 1
             },
-            function(start, end){
-                $('#daterange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+            ranges: {
+                '今天': [moment(), moment()],
+                '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                '过去7天': [moment().subtract(6, 'days'), moment()],
+                '过去30天': [moment().subtract(29, 'days'), moment()],
+                '这个月': [moment().startOf('month'), moment().endOf('month')],
+                '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             }
-        );
+        }, function(start, end, label) {
+            console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
 
         //data-table
         $('#exampleTableToolbar').bootstrapTable({
