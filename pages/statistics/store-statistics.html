@@ -293,7 +293,7 @@
                                     <th data-field="col-02">店铺名称</th>
                                     <th data-field="col-03">充值类型</th>
                                     <th data-field="col-04">充值方式</th>
-                                    <th data-field="col-05">订单数</th>
+                                    <th data-field="col-05" data-footer-formatter="total02">订单数</th>
                                     <th data-field="col-06" data-footer-formatter="total01">交易金额（元）</th>
                                 </tr>
                             </thead>
@@ -448,6 +448,9 @@
     //表格合计
     function total01(data) {
         return '10000.00';
+    }
+    function total02(data) {
+        return '1000';
     }
 
 </script>
