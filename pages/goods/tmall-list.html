@@ -289,7 +289,7 @@
                                     <td>2018-12-16</td>
                                     <td>2018-5-24 24:15:16</td>
                                     <td>
-                                        <button class="btn btn-primary  btn-sm">重新授权</button>
+                                        <button class="btn btn-primary  btn-sm not-expired">重新授权</button>
                                         <button class="btn btn-danger  btn-sm delete-button">删除</button>
                                     </td>
                                 </tr>
@@ -543,6 +543,9 @@
                 function(){
                     swal("删除成功", "店铺删除成功", "success");
                 });
+        });
+        $(".not-expired").click(function () {
+            swal({title: "账号未过期，请勿操作", text: "", type: "warning"})
         });
     })
 
