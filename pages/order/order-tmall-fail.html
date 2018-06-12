@@ -126,7 +126,7 @@
                             <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
                         </li>
                         <li>
-                            <a href="../goods/Steam-account-list.html">Steam账号列表</a>
+                            <a href="../goods/steam-account-list.html">Steam账号列表</a>
                         </li>
                         <li>
                             <a href="../goods/account-alarm-settings.html">账户报警设置</a>
@@ -393,7 +393,7 @@
                                         <a href="javascript:void(0)" class="btn btn-primary margin-bottom-xs btn-xs">交易成功</a>
                                         <a href="javascript:void(0)" class="btn btn-primary margin-bottom-xs btn-xs">交易失败</a>
                                         <a href="javascript:void(0)" class="btn btn-primary margin-bottom-xs btn-xs">重新通知</a>
-                                        <a href="../order/order-tmall-fail-detail.html" class="btn btn-primary margin-bottom-xs btn-xs">详情</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#orderTmallDetail">详情</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -423,7 +423,115 @@
 </div>
 <!-- ./wrapper -->
 
-
+<!--详情弹窗-->
+<div class="modal" id="orderTmallDetail" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">淘宝天猫掉单详情</h4>
+            </div>
+            <div class="modal-body">
+                <h5 class="text-center">订单信息</h5>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>天猫/淘宝订单编号</strong></div>
+                        <div class="col-sm-3">894651546113</div>
+                        <div class="col-sm-3 text-right"><strong>平台订单编号</strong></div>
+                        <div class="col-sm-3">94856134856</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>Steam交易编号</strong></div>
+                        <div class="col-sm-3">95694856131</div>
+                        <div class="col-sm-3 text-right"><strong>商品编号</strong></div>
+                        <div class="col-sm-3">9485613485</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>商品名称</strong></div>
+                        <div class="col-sm-3">绝地求生</div>
+                        <div class="col-sm-3 text-right"><strong>面值</strong></div>
+                        <div class="col-sm-3">100.00</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>商品数量</strong></div>
+                        <div class="col-sm-3">1</div>
+                        <div class="col-sm-3 text-right"><strong>直储账号</strong></div>
+                        <div class="col-sm-3">12345</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>直储账号余额</strong></div>
+                        <div class="col-sm-3">50.00</div>
+                        <div class="col-sm-3 text-right"><strong>销售价</strong></div>
+                        <div class="col-sm-3">100.00</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>商品类型</strong></div>
+                        <div class="col-sm-3">直储</div>
+                        <div class="col-sm-3 text-right"><strong>充值方式</strong></div>
+                        <div class="col-sm-3">直储自上架</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>进货价</strong></div>
+                        <div class="col-sm-3">-</div>
+                        <div class="col-sm-3 text-right"><strong>手续费</strong></div>
+                        <div class="col-sm-3">5.00</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>利润</strong></div>
+                        <div class="col-sm-3">-</div>
+                        <div class="col-sm-3 text-right"><strong>订单状态</strong></div>
+                        <div class="col-sm-3">完成</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>下单时间</strong></div>
+                        <div class="col-sm-3">2018-05-12 18:15:16</div>
+                        <div class="col-sm-3 text-right"><strong>接单时间</strong></div>
+                        <div class="col-sm-3">2018-05-12 18:15:16</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>渠道来源</strong></div>
+                        <div class="col-sm-3">淘宝</div>
+                        <div class="col-sm-3 text-right"><strong>店铺名称</strong></div>
+                        <div class="col-sm-3">店铺一</div>
+                    </div>
+                </div>
+                <hr>
+                <h5 class="text-center">充值信息</h5>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>玩家账号</strong></div>
+                        <div class="col-sm-3">nhgb123</div>
+                        <div class="col-sm-3 text-right"><strong>玩家密码</strong></div>
+                        <div class="col-sm-3">XXXXXXX</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>玩家好友链接</strong></div>
+                        <div class="col-sm-3">-</div>
+                        <div class="col-sm-3 text-right"><strong>充值时间</strong></div>
+                        <div class="col-sm-3">2018-05-12 18:15:17</div>
+                    </div>
+                </div>
+                <hr>
+                <h5 class="text-center">卡密信息</h5>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>卡号</strong></div>
+                        <div class="col-sm-3">84561265</div>
+                        <div class="col-sm-3 text-right"><strong>密码</strong></div>
+                        <div class="col-sm-3">85132XXXXXX</div>
+                    </div>
+                </div>
+                <hr>
+                <h5 class="text-center">错误日志</h5>
+                <p class="text-center">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--详情弹窗-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>

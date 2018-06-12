@@ -126,7 +126,7 @@
                             <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
                         </li>
                         <li>
-                            <a href="../goods/Steam-account-list.html">Steam账号列表</a>
+                            <a href="../goods/steam-account-list.html">Steam账号列表</a>
                         </li>
                         <li>
                             <a href="../goods/account-alarm-settings.html">账户报警设置</a>
@@ -295,7 +295,7 @@
                                     <td>1900.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>取订单编号</td>
-                                    <td><a href="../finance/margin-change-logs-detail.html" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#marginChangeLogsDetail">详情</a></td>
                                 </tr>
                                 <tr>
                                     <td>商户在线充值</td>
@@ -305,7 +305,7 @@
                                     <td>2000.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>取订单编号</td>
-                                    <td><a href="../finance/margin-change-logs-detail.html" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#marginChangeLogsDetail">详情</a></td>
                                 </tr>
                                 <tr>
                                     <td>卡密直储产品手续费扣除</td>
@@ -315,7 +315,7 @@
                                     <td>1500.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>取订单编号</td>
-                                    <td><a href="../finance/margin-change-logs-detail.html" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#marginChangeLogsDetail">详情</a></td>
                                 </tr>
                                 <tr>
                                     <td>后台财务加款</td>
@@ -325,7 +325,7 @@
                                     <td>1550.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>取加款备注</td>
-                                    <td><a href="../finance/margin-change-logs-detail.html" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#marginChangeLogsDetail">详情</a></td>
                                 </tr>
                                 <tr>
                                     <td>后台财务加款</td>
@@ -335,7 +335,7 @@
                                     <td>1050.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>取扣款备注</td>
-                                    <td><a href="../finance/margin-change-logs-detail.html" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><a href="javascript:void(0)" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#marginChangeLogsDetail">详情</a></td>
                                 </tr>
 
                             </tbody>
@@ -365,7 +365,45 @@
 </div>
 <!-- ./wrapper -->
 
-
+<!--详情弹窗-->
+<div class="modal" id="marginChangeLogsDetail" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">手续费保证金变动明细详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">加减方式</div>
+                        <div class="col-sm-9">加款</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">操作类型</div>
+                        <div class="col-sm-9">后台财务加款</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">变动金额</div>
+                        <div class="col-sm-9">100.00元</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">操作时间</div>
+                        <div class="col-sm-9">2018-05-02 24:16:15</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">加款备注</div>
+                        <div class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--详情弹窗-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
