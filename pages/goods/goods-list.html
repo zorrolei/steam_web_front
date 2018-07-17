@@ -244,6 +244,7 @@
                                     <option value="全部">全部</option>
                                     <option value="卡密直储">卡密直储</option>
                                     <option value="直储">直储</option>
+                                    <option value="卡密">卡密</option>
                                 </select>
                             </div>
                             <div class="form-group margin-top-xs">
@@ -371,9 +372,32 @@
                                     <td>上架</td>
                                     <td>未指定</td>
                                     <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs dropoff-button">标记为下架</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs dropoff-button">标记为上架</button>
                                         <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#skuModal">外部SKU</button>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#inventoryAlarmModal">库存报警设置</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs">系统商品</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#importCard">导卡</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewCard">查看</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>123456789</td>
+                                    <td>绝地求生</td>
+                                    <td>绝地求生</td>
+                                    <td>Steam单机游戏</td>
+                                    <td>卡密直储</td>
+                                    <td>steam</td>
+                                    <td>动作，休闲</td>
+                                    <td>Mac  OS  X</td>
+                                    <td>98</td>
+                                    <td>——</td>
+                                    <td>自上架</td>
+                                    <td>上架</td>
+                                    <td>未指定</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs dropoff-button">标记为上架</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#skuModal">外部SKU</button>
+                                        <button class="btn btn-primary btn-xs margin-bottom-xs">自上架</button>
                                         <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#importCard">导卡</button>
                                         <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewCard">查看</button>
                                     </td>
@@ -560,6 +584,14 @@
                         <div class="col-sm-2 text-right">商品名称</div>
                         <div class="col-sm-10">绝地求生</div>
                     </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">商品类型</div>
+                        <div class="col-sm-10">卡密直储</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">商品面值</div>
+                        <div class="col-sm-10">100</div>
+                    </div>
                     <hr>
                     <div class="form-group">
                         <div class="col-sm-2 text-right">
@@ -587,6 +619,17 @@
                                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2"> 无卡号
                             </label>
                         </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-2 text-right">
+                        <p class="form-control-static"><span class="text-danger">*</span>折扣</p>
+                      </div>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                      <div class="col-sm-5">
+                        <p class="form-control-static">%</p>
+                      </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-2 text-right">
@@ -643,6 +686,18 @@
                     <div class="form-group">
                         <div class="col-sm-2 text-right">商品名称</div>
                         <div class="col-sm-10">绝地求生</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">商品类型</div>
+                        <div class="col-sm-10">卡密</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">商品面值</div>
+                        <div class="col-sm-10">100</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">折扣</div>
+                        <div class="col-sm-10">90%</div>
                     </div>
                     <hr>
                     <div class="form-group">
@@ -736,7 +791,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-control-static">导卡时间</div>
-                        <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
+                        <input type="text" class="form-control" id="daterange" style="min-width: 212px;">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-danger">搜索</button>
@@ -747,6 +802,8 @@
                         <tr>
                             <th data-field="col-01">卡号</th>
                             <th data-field="col-02">密码</th>
+                            <th data-field="col-08">导卡时面值</th>
+                            <th data-field="col-09">折扣%</th>
                             <th data-field="col-03">进货价</th>
                             <th data-field="col-04">导卡时间</th>
                             <th data-field="col-05">过期时间</th>
@@ -758,6 +815,8 @@
                         <tr>
                             <td>894561329486534</td>
                             <td>123XXXXXXXX4444</td>
+                            <td>100</td>
+                            <td>70</td>
                             <td>100.00</td>
                             <td>2018.5.12  24:15:17</td>
                             <td>2019.5.12</td>
@@ -767,6 +826,8 @@
                         <tr>
                             <td>894561329486534</td>
                             <td>123XXXXXXXX4444</td>
+                            <td>100</td>
+                            <td>70</td>
                             <td>100.00</td>
                             <td>2018.5.12  24:15:17</td>
                             <td>2019.5.12</td>
@@ -776,6 +837,8 @@
                         <tr>
                             <td>894561329486534</td>
                             <td>123XXXXXXXX4444</td>
+                            <td>100</td>
+                            <td>70</td>
                             <td>100.00</td>
                             <td>2018.5.12  24:15:17</td>
                             <td>2019.5.12</td>
@@ -920,7 +983,7 @@
             "timePicker24Hour": true,
             "timePickerSeconds": true,
             locale : {
-                "format" : 'YYYY-MM-DD HH:mm:ss',
+                "format" : 'YYYY-MM-DD',
                 "separator" : " 至 ",//
                 "applyLabel" : "确定",
                 "cancelLabel" : "取消",

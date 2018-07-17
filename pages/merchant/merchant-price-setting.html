@@ -286,6 +286,7 @@
                                         <option value="第五套">第五套</option>
                                     </select>
                                     <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                    <button class="btn btn-primary btn-xs margin-bottom-xs reset-price">清除密价</button>
                                 </td>
                             </tr>
                             <tr>
@@ -305,6 +306,7 @@
                                         <option value="第五套">第五套</option>
                                     </select>
                                     <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                  <button class="btn btn-primary btn-xs margin-bottom-xs reset-price">清除密价</button>
                                 </td>
                             </tr>
                             </tbody>
@@ -395,8 +397,6 @@
                         </div>
                         <div class="form-group margin-top-xs">
                             <button class="btn btn-primary">一键设置密价</button>
-                            <button class="btn btn-primary">一键恢复全部设置</button>
-                            <button class="btn btn-primary">保存设定</button>
                         </div>
                     </div>
                     <!-- /.box-body -->
@@ -586,19 +586,19 @@
             toolbarAlign:'right'
         });
         //sweatalert
-        $('.freeze-button').click(function () {
+        $('.reset-price').click(function () {
             swal({
-                    title: "确认冻结",
-                    text: "确定冻结选中的记录吗",
+                    title: "清除密价",
+                    text: "确定清除此商户的密价吗",
                     type: "warning",
                     showCancelButton: true,
                     cancelButtonText: "取消",
                     confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定冻结",
+                    confirmButtonText: "确定清除",
                     closeOnConfirm: false
                 },
                 function(){
-                    swal("冻结成功", "商户冻结成功", "success");
+                    swal("清除成功", "密价清除成功", "success");
                 });
         });
         $(".save-button").click(function () {
