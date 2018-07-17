@@ -102,16 +102,16 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
                 <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li  class="active"><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
                         <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
-                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
+                        <li><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -126,7 +126,7 @@
                         <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -135,7 +135,7 @@
                     <ul class="treeview-menu">
                         <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
                         <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
-                        <li class="active"><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
                         <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
                         <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
                         <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
@@ -205,12 +205,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                卡密导卡记录
+                购买游戏商品
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品管理</li>
-                <li class="active">卡密导卡记录</li>
+                <li>商品售卖渠道管理</li>
+                <li class="active">购买游戏商品</li>
             </ol>
         </section>
 
@@ -221,136 +221,59 @@
                 <!-- /.box-header -->
                 <form class="">
                     <div class="box-body form-inline">
-                        <div class="form-inline">
-                            <div class="form-group margin-top-xs">
-                                <select class="form-control">
-                                    <option value="按条件查找">按条件查找</option>
-                                    <option value="按商品编号">按商品编号</option>
-                                    <option value="按商品名称">按商品名称</option>
-                                    <option value="按供货商">按供货商</option>
-                                </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <p class="form-control-static">按导入时间</p>
-                                <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">商品类型</p>
-                              <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="卡密直储">卡密直储</option>
-                                <option value="卡密">卡密</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">平台类型</p>
-                              <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="steam">steam</option>
-                                <option value="origin">origin</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <button class="btn btn-danger">搜索</button>
-                            </div>
+                        <div class="form-group margin-top-xs">
+                            <select name="" id="" class="form-control">
+                                <option value="按条件搜索">按条件搜索</option>
+                                <option value="按商品名称搜索">按商品名称搜索</option>
+                                <option value="按目录搜索">按目录搜索</option>
+                            </select>
                         </div>
-
+                        <div class="form-group margin-top-xs">
+                            <input type="text" class="form-control" placeholder="请输入搜索条件">
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
                     </div>
                     <!-- /.box-body -->
                 </form>
             </div>
 
             <div class="box box-solid">
-                <div class="box-body table-responsive">
-                    <div class="example">
-                        <div class=" hidden-xs" id="exampleToolbar" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success">
-                                导出EXCEL
-                            </a>
+                <div class="box-body">
+                    <table id="exampleTableToolbar" class="text-center table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th data-field="col-01">商品编号</th>
+                            <th data-field="col-02">商品名称</th>
+                            <th data-field="col-03">一级目录</th>
+                            <th data-field="col-04">二级目录</th>
+                            <th data-field="col-05">平台类型</th>
+                            <th data-field="col-06">商品分类</th>
+                            <th data-field="col-07">平台分类</th>
+                            <th data-field="col-08">商品面值</th>
+                            <th data-field="col-09">供货方式</th>
+                            <th data-field="col-10">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12345678</td>
+                            <td>绝地求生</td>
+                            <td>目录一</td>
+                            <td>目录二</td>
+                            <td>steam</td>
+                            <td>动作，休闲</td>
+                            <td>Mac  OS  X</td>
+                            <td>98</td>
+                            <td>自上架</td>
+                            <td>
+                                <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">购买商品</button>
+                            </td>
+                        </tr>
 
-                        </div>
-                        <table id="exampleTableToolbar" class="text-center table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th data-field="col-01">商品编号</th>
-                                    <th data-field="col-02">商品名称</th>
-                                    <th data-field="col-03">商品二级目录</th>
-                                    <th data-field="col-04">商品一级目录</th>
-                                    <th data-field="col-05">商品类型</th>
-                                    <th data-field="col-06">平台类型</th>
-                                    <th data-field="col-07">卡面值</th>
-                                    <th data-field="col-08">数量（张）</th>
-                                    <th data-field="col-09">折扣（%）</th>
-                                    <th data-field="col-10">进货价</th>
-                                    <th data-field="col-11">供货商</th>
-                                    <th data-field="col-12">过期时间</th>
-                                    <th data-field="col-13">导入时间</th>
-                                    <th data-field="col-14">操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -374,62 +297,151 @@
 </div>
 <!-- ./wrapper -->
 
-<!--修改库存-->
-<div class="modal" id="viewModal" tabindex="-1" role="dialog">
+<!--弹窗-->
+<div class="modal" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">卡密详情</h4>
+                <h4 class="modal-title">购买信息填写</h4>
             </div>
             <div class="modal-body">
-                <div class="form-inline form-group">
-                    <p class="form-control-static">按卡号查询</p>
-                    <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                    <button class="btn btn-danger">搜索</button>
-                </div>
-                <table id="viewTable" class="text-center table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th data-field="col-01">卡号</th>
-                            <th data-field="col-02">密码</th>
-                            <th data-field="col-03">导入时间</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品名称</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">绝地求生</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">平台类型</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">Steam</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品面值</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">78元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">供货方式</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">系统商品</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品售价</label>
+                        <div class="col-sm-4 form-inline">
+                            <input type="text" class="form-control"> 元
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">账号类型</label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 账号密码
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 友情链接
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">平台账号</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="请输入要充值的平台账号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">平台密码</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" placeholder="请输入要充值的平台密码">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#buyConfirm">确定</button>
             </div>
         </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--修改库存-->
+    </div>
+</div>
+<!--弹窗-->
+<!--游戏商品购买确认-->
+<div class="modal" id='buyConfirm' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">游戏商品购买确认</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <h5>商品信息：</h5>
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品名称</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">绝地求生</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">平台类型</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">Steam</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">供货方式</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">系统商品</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品面值</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">78元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">商品售价</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static">78元</p>
+                        </div>
+                    </div>
+                    <h5>商品信息：</h5>
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">账号类型</label>
+                        <div class="col-sm-4 form-inline">
+                            <p class="form-control-static">账号密码</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">玩家账号</label>
+                        <div class="col-sm-4 form-inline">
+                            <p class="form-control-static">13123123132</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">玩家密码</label>
+                        <div class="col-sm-4 form-inline">
+                            <p class="form-control-static">13123123132</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary submit-button" data-dismiss="modal">确认充值</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+<!--游戏商品购买确认-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -496,20 +508,21 @@
             buttonsAlign:'left',
             toolbarAlign:'right'
         });
-        $('#viewTable').bootstrapTable({
-            showColumns: true,
-            pagination:true,
-            icons: {
-                columns: 'glyphicon-list'
-            },
-            sidePagination:'client',
-            pageNumber:1,
-            pageSize:10,
-            buttonsAlign:'left',
-            toolbarAlign:'right'
-        });
         //sweatalert
-
+        $(".submit-button").click(function () {
+            swal({
+                title: "提交/充值成功",
+                text: "订单号：123456789 \n 卡号：123215555555555 \n 密码：123215555555555",
+                type: "success",
+                showCancelButton: true,
+                cancelButtonText: "关闭",
+                confirmButtonColor: "#AEDEF4",
+                confirmButtonText: "查看订单",
+                closeOnConfirm: false
+            },function () {
+                console.log('确认的事件')
+            })
+        });
 
     })
 

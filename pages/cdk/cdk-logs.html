@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-
-
     <!-- bootstrap-table -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-table/dist/bootstrap-table.min.css">
     <!-- sweetalert -->
@@ -126,7 +124,7 @@
                         <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -135,7 +133,7 @@
                     <ul class="treeview-menu">
                         <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
                         <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
-                        <li class="active"><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
                         <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
                         <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
                         <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
@@ -167,7 +165,7 @@
                         <li><a href="../../pages/order/order-cdk-fail.html">CDK充值掉单管理</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -175,7 +173,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="../../pages/cdk/cdk-manage.html">CDK管理</a></li>
-                        <li><a href="../../pages/cdk/cdk-logs.html">CDK生成记录</a></li>
+                        <li class="active"><a href="../../pages/cdk/cdk-logs.html">CDK生成记录</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -205,12 +203,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                卡密导卡记录
+                CDK生成记录
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品管理</li>
-                <li class="active">卡密导卡记录</li>
+                <li>充值码CDK管理</li>
+                <li class="active">CDK生成记录</li>
             </ol>
         </section>
 
@@ -221,41 +219,36 @@
                 <!-- /.box-header -->
                 <form class="">
                     <div class="box-body form-inline">
-                        <div class="form-inline">
-                            <div class="form-group margin-top-xs">
-                                <select class="form-control">
-                                    <option value="按条件查找">按条件查找</option>
-                                    <option value="按商品编号">按商品编号</option>
-                                    <option value="按商品名称">按商品名称</option>
-                                    <option value="按供货商">按供货商</option>
-                                </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <p class="form-control-static">按导入时间</p>
-                                <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">商品类型</p>
-                              <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="卡密直储">卡密直储</option>
-                                <option value="卡密">卡密</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">平台类型</p>
-                              <select name="" id="" class="form-control">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="按条件查找">按条件查找</option>
+                                <option value="按商品编号">按商品编号</option>
+                                <option value="按商品名称">按商品名称</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="请输入搜索关键词">
+                        </div>
+                        <div class="form-group margin-bottom-xs">
+                            <p class="form-control-static">平台类型</p>
+                            <select class="form-control">
                                 <option value="全部">全部</option>
                                 <option value="steam">steam</option>
                                 <option value="origin">origin</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <button class="btn btn-danger">搜索</button>
-                            </div>
+                            </select>
+                        </div>
+                        <div class="form-group margin-bottom-xs">
+                            <p class="form-control-static">商品类型</p>
+                            <select class="form-control">
+                                <option value="全部">全部</option>
+                                <option value="直储">直储</option>
+                                <option value="卡密直储">卡密直储</option>
+                                <option value="卡密">卡密</option>
+                            </select>
+                        </div>
+                        <div class="form-group margin-bottom-xs">
+
+                            <p class="form-control-static">按生成时间</p>
+                            <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
+                            <button class="btn btn-danger">搜索</button>
                         </div>
 
                     </div>
@@ -266,12 +259,6 @@
             <div class="box box-solid">
                 <div class="box-body table-responsive">
                     <div class="example">
-                        <div class=" hidden-xs" id="exampleToolbar" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success">
-                                导出EXCEL
-                            </a>
-
-                        </div>
                         <table id="exampleTableToolbar" class="text-center table-hover table-striped">
                             <thead>
                                 <tr>
@@ -281,14 +268,11 @@
                                     <th data-field="col-04">商品一级目录</th>
                                     <th data-field="col-05">商品类型</th>
                                     <th data-field="col-06">平台类型</th>
-                                    <th data-field="col-07">卡面值</th>
-                                    <th data-field="col-08">数量（张）</th>
-                                    <th data-field="col-09">折扣（%）</th>
-                                    <th data-field="col-10">进货价</th>
-                                    <th data-field="col-11">供货商</th>
-                                    <th data-field="col-12">过期时间</th>
-                                    <th data-field="col-13">导入时间</th>
-                                    <th data-field="col-14">操作</th>
+                                    <th data-field="col-07">商品面值</th>
+                                    <th data-field="col-08">数量</th>
+                                    <th data-field="col-09">过期时间</th>
+                                    <th data-field="col-10">生成时间</th>
+                                    <th data-field="col-11">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -296,57 +280,17 @@
                                     <td>5132</td>
                                     <td>绝地求生</td>
                                     <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
+                                    <td>steam单机游戏</td>
                                     <td>卡密直储</td>
                                     <td>steam</td>
                                     <td>98</td>
                                     <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
+                                    <td>2018-05-02 24:15:16</td>
+                                    <td>2018-05-02 24:15:16</td>
                                     <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
+                                        <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#CDKDetail">生成详情</button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -374,62 +318,64 @@
 </div>
 <!-- ./wrapper -->
 
-<!--修改库存-->
-<div class="modal" id="viewModal" tabindex="-1" role="dialog">
+<!--CDK生成记录-->
+<div class="modal" id="CDKDetail" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">卡密详情</h4>
+                <h4 class="modal-title">CDK生成详情</h4>
             </div>
             <div class="modal-body">
-                <div class="form-inline form-group">
-                    <p class="form-control-static">按卡号查询</p>
-                    <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                    <button class="btn btn-danger">搜索</button>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <p class="form-control-static">按CDK码查询</p>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger">搜索</button>
+                    </div>
                 </div>
-                <table id="viewTable" class="text-center table-hover table-striped">
-                    <thead>
+                <hr>
+                <div class="example">
+                    <div class=" hidden-xs" id="exampleToolbar2" role="group">
+                        <a href="javascript:void(0);" type="button" class="btn btn-success shelf-button">
+                            复制CDK码
+                        </a>
+                    </div>
+                    <table id="exampleTableToolbar2" class="text-center table-hover table-striped">
+                        <thead>
                         <tr>
-                            <th data-field="col-01">卡号</th>
-                            <th data-field="col-02">密码</th>
-                            <th data-field="col-03">导入时间</th>
+                            <th data-field="col-01">CDK码</th>
+                            <th data-field="col-02">生成时间</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9485612488454856</td>
+                                <td>2018-05-15 23:16:15</td>
+                            </tr>
+                            <tr>
+                                <td>9485612488454856</td>
+                                <td>2018-05-15 23:16:15</td>
+                            </tr>
+                            <tr>
+                                <td>9485612488454856</td>
+                                <td>2018-05-15 23:16:15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--修改库存-->
+<!--CDK生成记录-->
+
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -441,9 +387,6 @@
 <!-- date-range-picker -->
 <script src="../../bower_components/moment/min/moment.min.js"></script>
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-
-
 <!-- bootstrap-table -->
 <script src="../../bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="../../bower_components/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
@@ -482,6 +425,29 @@
             console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
         });
 
+        //datetimepicker
+        $('#dataTimePicker').daterangepicker({
+            "singleDatePicker": true,
+            "autoApply": true,
+            "timePicker": true,
+            "timePicker24Hour": true,
+            "timePickerSeconds": true,
+            locale : {
+                "format" : 'YYYY-MM-DD HH:mm:ss',
+                "separator" : " 至 ",//
+                "applyLabel" : "确定",
+                "cancelLabel" : "取消",
+                "fromLabel" : "起始时间",
+                "toLabel" : "结束时间'",
+                "customRangeLabel" : "自定义",
+                "weekLabel" : "W",
+                "daysOfWeek" : ["日", "一", "二", "三", "四", "五", "六"],
+                "monthNames" : ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                "firstDay" : 1
+            }
+        }, function(start, end, label) {
+            console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
         //data-table
         $('#exampleTableToolbar').bootstrapTable({
             showColumns: true,
@@ -496,12 +462,13 @@
             buttonsAlign:'left',
             toolbarAlign:'right'
         });
-        $('#viewTable').bootstrapTable({
+        $('#exampleTableToolbar2').bootstrapTable({
             showColumns: true,
-            pagination:true,
+            toolbar: '#exampleToolbar2',
             icons: {
                 columns: 'glyphicon-list'
             },
+            pagination:true,
             sidePagination:'client',
             pageNumber:1,
             pageSize:10,
@@ -509,8 +476,57 @@
             toolbarAlign:'right'
         });
         //sweatalert
-
-
+        $('.batch-thawing').click(function () {
+            swal({
+                    title: "批量解冻",
+                    text: "确定解冻选中的CDK吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定解冻",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("解冻成功", "CDK解冻成功", "success");
+                });
+        });
+        $('.batch-freeze').click(function () {
+            swal({
+                    title: "批量冻结",
+                    text: "确定冻结选中的CDK吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定冻结",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("冻结成功", "CDK冻结成功", "success");
+                });
+        });
+        $('.btn-freeze').click(function () {
+            swal({
+                    title: "冻结CDK",
+                    text: "确定冻结此CDK吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定冻结",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("冻结成功", "CDK冻结成功", "success");
+                });
+        });
+        $(".batch-marked-as-sold").click(function () {
+            swal({title: "标记成功", text: "成功标记为已销售状态", type: "success"})
+        });
+        $(".marked-as-not-sold").click(function () {
+            swal({title: "标记成功", text: "成功标记为未销售状态", type: "success"})
+        });
     })
 
 

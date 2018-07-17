@@ -101,119 +101,97 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
-                <li class="">
-                    <a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a>
-                </li>
+                <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../goods/tmall-list.html">淘宝天猫店铺列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/goods-list.html">商品列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-stock.html">卡密库存列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-import-log.html">卡密导卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/steam-account-list.html">Steam账号列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/account-alarm-settings.html">账户报警设置</a>
-                        </li>
-                        <li>
-                            <a href="../goods/alarm-list.html">报警列表</a>
-                        </li>
+                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
+                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
+                        <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
+                        <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
+                        <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
+                        <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
                     </ul>
                 </li>
                 <li class="treeview active">
-                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active">
-                            <a href="../finance/account-manage.html">账户管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-amount-manage.html">交易额度划拨管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-manage.html">手续费保证金充值管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-change-logs.html">交易额度变动明细</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-change-logs.html">手续费保证金变动明细</a>
-                        </li>
+                        <li class="active"><a href="../../pages/finance/account-manage.html">账户管理</a></li>
+                        <li><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
+                        <li><a href="../../pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
+                        <li><a href="../../pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../order/order-tmall.html">淘宝天猫订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-tmall-fail.html">淘宝天猫掉单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk.html">CDK充值订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk-fail.html">CDK充值掉单管理</a>
-                        </li>
+                        <li><a href="../../pages/order/order-tmall.html">订单管理</a></li>
+                        <li><a href="../../pages/order/order-tmall-fail.html">订单掉单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk.html">CDK充值订单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk-fail.html">CDK充值掉单管理</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../cdk/cdk-manage.html">CDK管理</a>
-                        </li>
+                        <li><a href="../../pages/cdk/cdk-manage.html">CDK管理</a></li>
+                        <li><a href="../../pages/cdk/cdk-logs.html">CDK生成记录</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../statistics/store-statistics.html">店铺交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/goods-statistics.html">商品交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/account-statistics.html">直储账号交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/steam-statistics-download.html">Steam账号余额统计下载</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-statistics.html">下级交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-goods-statistics.html">下级商品交易统计</a>
-                        </li>
+                        <li><a href="../../pages/statistics/order-statistics.html">订单交易统计</a></li>
+                        <li><a href="../../pages/statistics/store-statistics.html">店铺交易统计</a></li>
+                        <li><a href="../../pages/statistics/goods-statistics.html">商品交易统计</a></li>
+                        <li><a href="../../pages/statistics/account-statistics.html">直储账号交易统计</a></li>
+                        <li><a href="../../pages/statistics/steam-statistics-download.html">凌晨数据统计下载</a></li>
+                        <li><a href="../../pages/statistics/subordinate-statistics.html">下级交易统计</a></li>
+                        <li><a href="../../pages/statistics/subordinate-goods-statistics.html">下级商品交易统计</a></li>
                     </ul>
                 </li>
             </ul>
@@ -239,169 +217,224 @@
         <!-- Main content -->
         <section class="content container-fluid">
 
-            <div class="box box-solid">
-                <div class="box-header with-border">
-                    <button class="btn btn-default btn-xs pull-right"  data-toggle="modal" data-target="#editAccountInfo"><i class="fa fa-edit"></i> 编辑</button>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <button class="btn btn-primary btn-xs pull-right"  data-toggle="modal" data-target="#editAccountInfo"><i class="fa fa-edit"></i> 编辑</button>
 
-                    <h3 class="box-title">个人信息</h3>
-                </div>
-                <div class="box-body table-responsive">
+                            <h3 class="box-title">个人信息</h3>
+                        </div>
+                        <div class="box-body table-responsive">
 
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">商户编号</p>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">商户编号</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">12412341234</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">用户名</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">123412341234</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">商户级别</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">经销商</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">商户名称</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">王二小</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">所在地区</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">河北省 廊坊市</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">联系人姓名</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">王二小</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">身份证号</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">1234567891123456789</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">联系人手机</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">13948251135</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">联系人电话</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">010-12345678</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">联系人QQ</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">12345678</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">电子信箱</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">12345678@qq.com</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">传真</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">12345678@qq.com</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">店铺地址</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">www.taobao123456.com</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">详细联系地址</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">河北省廊坊市第一大马路14号</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">推荐人商户编号</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">89456132</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">12412341234</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">用户名</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">123412341234</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">商户级别</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">经销商</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">商户名称</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">王二小</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">所在地区</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">河北省 廊坊市</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">联系人姓名</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">王二小</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">身份证号</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">1234567891123456789</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">联系人手机</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">13948251135</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">联系人电话</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">010-12345678</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">联系人QQ</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">12345678</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">电子信箱</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">12345678@qq.com</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">传真</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">12345678@qq.com</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">店铺地址</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">www.taobao123456.com</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">详细联系地址</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">河北省廊坊市第一大马路14号</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">推荐人商户编号</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">89456132</p>
-                            </div>
+
                         </div>
                     </div>
-
                 </div>
-            </div>
-
-            <div class="box box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">账户信息</h3>
-                </div>
-                <div class="box-body table-responsive">
-
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">手续费保证金</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">10000元</p>
-                            </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">安全设置</h3>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-3 text-right">
-                                <p class="form-control-static">交易额度</p>
+                        <div class="box-body table-responsive">
+
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">交易密码</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="form-control-static">已设置</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#editPassword">修改密码</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">绑定硬件</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="form-control-static">已绑定</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#bindIP">编辑</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">绑定IP</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="form-control-static">已绑定</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-9">
-                                <p class="form-control-static">10000元 <span class="text-danger">注:交易额度划拨请联系上级商户</span></p>
-                            </div>
+
                         </div>
                     </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">账户信息</h3>
+                        </div>
+                        <div class="box-body table-responsive">
 
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">账户金额</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="form-control-static">10000元</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#rechargeModal">在线充值</button>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 text-right">
+                                        <p class="form-control-static">账户报警金额</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="form-control-static">10000元</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#alarmSetting">设置报警额度</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </section>
         <!-- /.content -->
     </div>
@@ -574,6 +607,354 @@
 </div><!-- /.modal -->
 <!--修改个人信息-->
 
+<!--修改密码-->
+<div class="modal" id="editPassword" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">修改交易密码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">原密码</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="请输入原密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">新密码</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="请输入新密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">确认新密码</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="请输入原密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-sm-push-4">
+                            <p class="form-control-static">注：交易密码非常重要，请牢记</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--修改密码-->
+
+<!--绑定硬件IP-->
+<div class="modal" id="bindIP" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">安全绑定设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">绑定硬件</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="绑定硬件">
+                                <span class="input-group-btn">
+        <button class="btn btn-default" type="button">获取本机硬件号</button>
+      </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="绑定硬件">
+                                <span class="input-group-btn">
+        <button class="btn btn-default" type="button">获取本机硬件号</button>
+      </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">绑定IP</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="绑定IP">
+                                <span class="input-group-btn">
+        <button class="btn btn-default" type="button">获取本机IP</button>
+      </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="绑定IP">
+                                <span class="input-group-btn">
+        <button class="btn btn-default" type="button">获取本机IP</button>
+      </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-3">
+                            <p class="form-control-static">注：绑定后非绑定设备或IP不可登录</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--绑定硬件IP-->
+
+<!--账户金额在线充值-->
+<div class="modal" id="rechargeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">账户金额在线充值</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">充值账号</p>
+                        </div>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">afasdfasdfasdf</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">支付方式</p>
+                        </div>
+                        <div class="col-sm-10 form-inline">
+                            <p class="form-control-static">在线银行支付</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">选择付款银行</p>
+                        </div>
+                        <div class="col-sm-10 form-inline">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 银行1
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">充值金额</p>
+                        </div>
+                        <div class="col-sm-10 form-inline">
+                            <input type="text" class="form-control" placeholder="请输入充值金额">
+                            <p class="form-control-static">
+                                元
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#marginRechargeModal">确认支付</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--账户金额在线充值-->
+
+<!--账户金额在线充值确认-->
+<div class="modal" id="marginRechargeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">手续费保证金在线充值确认</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">充值账号</div>
+                        <div class="col-sm-8">asfasdfasdfasfasdfasdf</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">支付方式</div>
+                        <div class="col-sm-8">在线银行支付</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">付款银行</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">银行名称</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">充值金额</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">1000.00元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">手续费</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">5.00元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">支付金额</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">1005.00元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right">
+                            <p class="form-control-static">支付注意事项</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <ul class="text-danger" style="margin: 0;padding: 0;">
+                                <li>在网银支付页面支付成功后，为避免您的资金不能及时到账，请勿手动关闭支付页面，等待页面跳转回本网站方可关闭。</li>
+                                <li>如果支付成功后不小心关闭了支付页面，请等待2-15分钟再查看充值金额是否到账。</li>
+                                <li>如果长时间未到账或有其他问题，请与本站客服联系。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary submit-button" data-dismiss="modal">确认支付</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--账户金额在线充值确认-->
+
+<!--账户报警设置-->
+<div class="modal" id="alarmSetting" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">账户报警设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">账户金额余额</div>
+                        <div class="col-sm-8">1000.00元</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">账户金额报警额度</div>
+                        <div class="col-sm-8 form-inline">
+                            <input type="text" class="form-control" placeholder="报警额度">
+                            元
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-4">
+                            <p class="form-control-static text-danger">注：账户金额低于设置的额度时，会有提示余额不足。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--账户报警设置-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -629,7 +1010,10 @@
         //data-table
 
         //sweatalert
-        
+
+        $(".submit-button").click(function () {
+            swal({title: "支付成功", text: "本次成功支付1005.00元", type: "success"})
+        });
 
     })
 

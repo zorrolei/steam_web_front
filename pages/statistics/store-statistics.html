@@ -101,119 +101,97 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
-                <li class="">
-                    <a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a>
-                </li>
+                <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../goods/tmall-list.html">淘宝天猫店铺列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/goods-list.html">商品列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-stock.html">卡密库存列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-import-log.html">卡密导卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/steam-account-list.html">Steam账号列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/account-alarm-settings.html">账户报警设置</a>
-                        </li>
-                        <li>
-                            <a href="../goods/alarm-list.html">报警列表</a>
-                        </li>
+                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
+                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../finance/account-manage.html">账户管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-amount-manage.html">交易额度划拨管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-manage.html">手续费保证金充值管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-change-logs.html">交易额度变动明细</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-change-logs.html">手续费保证金变动明细</a>
-                        </li>
+                        <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
+                        <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
+                        <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../order/order-tmall.html">淘宝天猫订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-tmall-fail.html">淘宝天猫掉单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk.html">CDK充值订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk-fail.html">CDK充值掉单管理</a>
-                        </li>
+                        <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
+                        <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
+                        <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../cdk/cdk-manage.html">CDK管理</a>
-                        </li>
+                        <li><a href="../../pages/finance/account-manage.html">账户管理</a></li>
+                        <li><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
+                        <li><a href="../../pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
+                        <li><a href="../../pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/order/order-tmall.html">订单管理</a></li>
+                        <li><a href="../../pages/order/order-tmall-fail.html">订单掉单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk.html">CDK充值订单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk-fail.html">CDK充值掉单管理</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/cdk/cdk-manage.html">CDK管理</a></li>
+                        <li><a href="../../pages/cdk/cdk-logs.html">CDK生成记录</a></li>
                     </ul>
                 </li>
                 <li class="treeview active">
-                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active">
-                            <a href="../statistics/store-statistics.html">店铺交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/goods-statistics.html">商品交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/account-statistics.html">直储账号交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/steam-statistics-download.html">Steam账号余额统计下载</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-statistics.html">下级交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-goods-statistics.html">下级商品交易统计</a>
-                        </li>
+                        <li><a href="../../pages/statistics/order-statistics.html">订单交易统计</a></li>
+                        <li class="active"><a href="../../pages/statistics/store-statistics.html">店铺交易统计</a></li>
+                        <li><a href="../../pages/statistics/goods-statistics.html">商品交易统计</a></li>
+                        <li><a href="../../pages/statistics/account-statistics.html">直储账号交易统计</a></li>
+                        <li><a href="../../pages/statistics/steam-statistics-download.html">凌晨数据统计下载</a></li>
+                        <li><a href="../../pages/statistics/subordinate-statistics.html">下级交易统计</a></li>
+                        <li><a href="../../pages/statistics/subordinate-goods-statistics.html">下级商品交易统计</a></li>
                     </ul>
                 </li>
             </ul>
@@ -250,20 +228,28 @@
                             <input type="text" class="form-control" placeholder="请输入搜索关键字" style="min-width: 200px;">
                         </div>
                         <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按充值类型</p>
+                            <p class="form-control-static">按商品类型</p>
                             <select name="" class="form-control" id="">
                                 <option value="全部">全部</option>
-                                <option value="CDK">CDK</option>
-                                <option value="店铺直充">店铺直充</option>
+                                <option value="直储">直储</option>
+                                <option value="卡密直储">卡密直储</option>
                             </select>
                         </div>
                         <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按充值方式</p>
+                            <p class="form-control-static">按供货方式</p>
                             <select name="" class="form-control" id="">
                                 <option value="全部">全部</option>
-                                <option value="直储自上架">直储自上架</option>
-                                <option value="卡密自上架">卡密自上架</option>
-                                <option value="交易额度">交易额度</option>
+                                <option value="自上架">自上架</option>
+                                <option value="系统商品">系统商品</option>
+                            </select>
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <p class="form-control-static">按商品类型</p>
+                            <select name="" class="form-control" id="">
+                                <option value="全部">全部</option>
+                                <option value="直储">直储</option>
+                                <option value="卡密直储">卡密直储</option>
+                                <option value="卡密">卡密</option>
                             </select>
                         </div>
                         <div class="form-group margin-top-xs">
@@ -291,60 +277,64 @@
                                 <tr>
                                     <th data-field="col-01" data-footer-formatter='合计'>店铺编号</th>
                                     <th data-field="col-02">店铺名称</th>
-                                    <th data-field="col-03">充值类型</th>
-                                    <th data-field="col-04">充值方式</th>
-                                    <th data-field="col-05" data-footer-formatter="total02">订单数</th>
-                                    <th data-field="col-06" data-footer-formatter="total01">交易金额（元）</th>
+                                    <th data-field="col-03">商品类型</th>
+                                    <th data-field="col-04">供货方式</th>
+                                    <th data-field="col-05">订单数</th>
+                                    <th data-field="col-06">面值</th>
+                                    <th data-field="col-07" data-footer-formatter="total02">进货价（元）</th>
+                                    <th data-field="col-08" data-footer-formatter="total01">店铺销售价（元）</th>
+                                    <th data-field="col-09" data-footer-formatter="total01">手续费（元）</th>
+                                    <th data-field="col-10" data-footer-formatter="total01">利润（元）</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>845132</td>
                                     <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
+                                    <td>直储</td>
+                                    <td>自上架</td>
                                     <td>30</td>
                                     <td>2500.00</td>
+                                    <td>2300.00</td>
+                                    <td>2400.00</td>
+                                    <td>5.00</td>
+                                    <td>95.00</td>
                                 </tr>
                                 <tr>
                                     <td>845132</td>
                                     <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
+                                    <td>直储</td>
+                                    <td>自上架</td>
                                     <td>30</td>
                                     <td>2500.00</td>
+                                    <td>2300.00</td>
+                                    <td>2400.00</td>
+                                    <td>5.00</td>
+                                    <td>95.00</td>
                                 </tr>
                                 <tr>
                                     <td>845132</td>
                                     <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
+                                    <td>直储</td>
+                                    <td>自上架</td>
                                     <td>30</td>
                                     <td>2500.00</td>
+                                    <td>2300.00</td>
+                                    <td>2400.00</td>
+                                    <td>5.00</td>
+                                    <td>95.00</td>
                                 </tr>
                                 <tr>
                                     <td>845132</td>
                                     <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
+                                    <td>直储</td>
+                                    <td>自上架</td>
                                     <td>30</td>
                                     <td>2500.00</td>
-                                </tr>
-                                <tr>
-                                    <td>845132</td>
-                                    <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
-                                    <td>30</td>
-                                    <td>2500.00</td>
-                                </tr>
-                                <tr>
-                                    <td>845132</td>
-                                    <td>淘宝一店</td>
-                                    <td>CDK</td>
-                                    <td>直储自上架</td>
-                                    <td>30</td>
-                                    <td>2500.00</td>
+                                    <td>2300.00</td>
+                                    <td>2400.00</td>
+                                    <td>5.00</td>
+                                    <td>95.00</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -442,7 +432,7 @@
             showFooter:true
         });
         //sweatalert
-        
+
 
     })
     //表格合计

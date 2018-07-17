@@ -11,17 +11,12 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-
-
     <!-- bootstrap-table -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-table/dist/bootstrap-table.min.css">
     <!-- sweetalert -->
     <link rel="stylesheet" href="../../bower_components/sweetalert/sweetalert.css">
     <link rel="stylesheet" href="../../dist/css/skins/skin-red.min.css">
     <link rel="stylesheet" href="../../dist/css/style.css">
-
-
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
@@ -101,119 +96,97 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
-                <li class="">
-                    <a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a>
-                </li>
+                <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
                 <li class="treeview active">
-                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../goods/tmall-list.html">淘宝天猫店铺列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/goods-list.html">商品列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-stock.html">卡密库存列表</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-import-log.html">卡密导卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/card-pass-export-log.html">卡密取卡记录</a>
-                        </li>
-                        <li>
-                            <a href="../goods/steam-account-list.html">Steam账号列表</a>
-                        </li>
-                        <li class="active">
-                            <a href="../goods/account-alarm-settings.html">账户报警设置</a>
-                        </li>
-                        <li>
-                            <a href="../goods/alarm-list.html">报警列表</a>
-                        </li>
+                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
+                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../finance/account-manage.html">账户管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-amount-manage.html">交易额度划拨管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-manage.html">手续费保证金充值管理</a>
-                        </li>
-                        <li>
-                            <a href="../finance/transaction-change-logs.html">交易额度变动明细</a>
-                        </li>
-                        <li>
-                            <a href="../finance/margin-change-logs.html">手续费保证金变动明细</a>
-                        </li>
+                        <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
+                        <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
+                        <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../order/order-tmall.html">淘宝天猫订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-tmall-fail.html">淘宝天猫掉单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk.html">CDK充值订单管理</a>
-                        </li>
-                        <li>
-                            <a href="../order/order-cdk-fail.html">CDK充值掉单管理</a>
-                        </li>
+                        <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
+                        <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
+                        <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-money"></i> <span>财务管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../cdk/cdk-manage.html">CDK管理</a>
-                        </li>
+                        <li><a href="../../pages/finance/account-manage.html">账户管理</a></li>
+                        <li><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
+                        <li><a href="../../pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
+                        <li><a href="../../pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span> <span class="pull-right-container">
+                    <a href="#"><i class="fa fa-list"></i> <span>订单管理</span>
+                        <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li>
-                            <a href="../statistics/store-statistics.html">店铺交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/goods-statistics.html">商品交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/account-statistics.html">直储账号交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/steam-statistics-download.html">Steam账号余额统计下载</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-statistics.html">下级交易统计</a>
-                        </li>
-                        <li>
-                            <a href="../statistics/subordinate-goods-statistics.html">下级商品交易统计</a>
-                        </li>
+                        <li><a href="../../pages/order/order-tmall.html">订单管理</a></li>
+                        <li><a href="../../pages/order/order-tmall-fail.html">订单掉单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk.html">CDK充值订单管理</a></li>
+                        <li><a href="../../pages/order/order-cdk-fail.html">CDK充值掉单管理</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/cdk/cdk-manage.html">CDK管理</a></li>
+                        <li><a href="../../pages/cdk/cdk-logs.html">CDK生成记录</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-table"></i> <span>数据统计</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../../pages/statistics/order-statistics.html">订单交易统计</a></li>
+                        <li><a href="../../pages/statistics/store-statistics.html">店铺交易统计</a></li>
+                        <li><a href="../../pages/statistics/goods-statistics.html">商品交易统计</a></li>
+                        <li><a href="../../pages/statistics/account-statistics.html">直储账号交易统计</a></li>
+                        <li><a href="../../pages/statistics/steam-statistics-download.html">凌晨数据统计下载</a></li>
+                        <li><a href="../../pages/statistics/subordinate-statistics.html">下级交易统计</a></li>
+                        <li><a href="../../pages/statistics/subordinate-goods-statistics.html">下级商品交易统计</a></li>
                     </ul>
                 </li>
             </ul>
@@ -227,53 +200,26 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                账户报警设置
+                接口相关设置
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品管理</li>
-                <li class="active">账户报警设置</li>
+                <li>商品售卖渠道管理</li>
+                <li class="active">接口相关设置</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
-
             <div class="box box-solid">
                 <div class="box-body table-responsive">
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-aqua">
-                                <div class="inner">
-                                    <h3>500<sup style="font-size: 20px">元</sup></h3>
-
-                                    <p>交易额度</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-android-cart"></i>
-                                </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">接口文档下载</label>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-primary">点击下载接口文档</button>
                             </div>
                         </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-green">
-                                <div class="inner">
-                                    <h3>100.00<sup style="font-size: 20px">元</sup></h3>
-
-                                    <p>手续费保证金</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-cny"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                    </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-primary" style="width: 200px;" data-toggle="modal" data-target="#accountAlarmSettings">修改</button>
                     </div>
 
                 </div>
@@ -299,54 +245,6 @@
 </div>
 <!-- ./wrapper -->
 
-<!--账户报警设置-->
-<div class="modal" id="accountAlarmSettings" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">账户报警设置</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-4 text-right">
-                            <p class="form-control-static">交易额度</p>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" value="500.00" placeholder="请输入交易额度">
-                        </div>
-                        <div class="col-sm-3">
-                            <p class="form-control-static">元</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-4 text-right">
-                            <p class="form-control-static">手续费保证金</p>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" value="100.00" placeholder="请输入手续费保证金">
-                        </div>
-                        <div class="col-sm-3">
-                            <p class="form-control-static">元</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-9 col-sm-push-2">
-                            <p class="form-control-static text-danger">注：账户内对应选项余额低于设置的额度时，会有提示余额不足。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">保存</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--账户报警设置-->
-
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -358,9 +256,6 @@
 <!-- date-range-picker -->
 <script src="../../bower_components/moment/min/moment.min.js"></script>
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-
-
 <!-- bootstrap-table -->
 <script src="../../bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="../../bower_components/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
@@ -398,37 +293,42 @@
         }, function(start, end, label) {
             console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
         });
-
         //data-table
-
+        $('#exampleTableToolbar').bootstrapTable({
+            showColumns: true,
+            toolbar: '#exampleToolbar',
+            icons: {
+                columns: 'glyphicon-list'
+            },
+            pagination:true,
+            sidePagination:'client',
+            pageNumber:1,
+            pageSize:10,
+            buttonsAlign:'left',
+            toolbarAlign:'right'
+        });
         //sweatalert
-        
-
+        $('.delete-button').click(function () {
+            swal({
+                    title: "确认删除",
+                    text: "确定删除这条记录吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定删除",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("删除成功", "店铺删除成功", "success");
+                });
+        });
+        $(".not-expired").click(function () {
+            swal({title: "账号未过期，请勿操作", text: "", type: "warning"})
+        });
     })
 
 
-</script>
-<script>
-    // 实现多个模态框
-    $(document).on('show.bs.modal', '.modal', function(event) {
-        $(this).appendTo($('body'));
-    }).on('shown.bs.modal', '.modal.in', function(event) {
-        setModalsAndBackdropsOrder();
-    }).on('hidden.bs.modal', '.modal', function(event) {
-        setModalsAndBackdropsOrder();
-    });
-
-
-    function setModalsAndBackdropsOrder() {
-        var modalZIndex = 1040;
-        $('.modal.in').each(function(index) {
-            var $modal = $(this);
-            modalZIndex++;
-            $modal.css('zIndex', modalZIndex);
-            $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
-        });
-        $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
-    }
 </script>
 </body>
 </html>

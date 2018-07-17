@@ -114,7 +114,7 @@
                         <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -122,11 +122,11 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
-                        <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
+                        <li class="active"><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
                         <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-list"></i> <span>商品管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -135,7 +135,7 @@
                     <ul class="treeview-menu">
                         <li><a href="../../pages/goods/goods-list.html">商品列表</a></li>
                         <li><a href="../../pages/goods/card-pass-stock.html">卡密库存列表</a></li>
-                        <li class="active"><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
+                        <li><a href="../../pages/goods/card-pass-import-log.html">卡密导卡记录</a></li>
                         <li><a href="../../pages/goods/card-pass-export-log.html">卡密取卡记录</a></li>
                         <li><a href="../../pages/goods/steam-account-list.html">直储账号列表</a></li>
                         <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
@@ -205,12 +205,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                卡密导卡记录
+                下级商户价格设置
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品管理</li>
-                <li class="active">卡密导卡记录</li>
+                <li>下级商户管理</li>
+                <li class="active">下级商户价格设置</li>
             </ol>
         </section>
 
@@ -221,136 +221,95 @@
                 <!-- /.box-header -->
                 <form class="">
                     <div class="box-body form-inline">
-                        <div class="form-inline">
-                            <div class="form-group margin-top-xs">
-                                <select class="form-control">
-                                    <option value="按条件查找">按条件查找</option>
-                                    <option value="按商品编号">按商品编号</option>
-                                    <option value="按商品名称">按商品名称</option>
-                                    <option value="按供货商">按供货商</option>
-                                </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <p class="form-control-static">按导入时间</p>
-                                <input type="text" class="form-control" id="daterange" style="min-width: 312px;">
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">商品类型</p>
-                              <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="卡密直储">卡密直储</option>
-                                <option value="卡密">卡密</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                              <p class="form-control-static">平台类型</p>
-                              <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="steam">steam</option>
-                                <option value="origin">origin</option>
-                              </select>
-                            </div>
-                            <div class="form-group margin-top-xs">
-                                <button class="btn btn-danger">搜索</button>
-                            </div>
+                        <div class="form-group margin-top-xs">
+                            <select name="" id="" class="form-control">
+                                <option value="请选择查询条件">请选择查询条件</option>
+                                <option value="按商户编号">按商户编号</option>
+                                <option value="按用户名">按用户名</option>
+                                <option value="按商户名称">按商户名称</option>
+                                <option value="按联系人">按联系人</option>
+                                <option value="按手机号码">按手机号码</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="请输入搜索条件">
                         </div>
-
+                        <div class="form-group margin-top-xs">
+                            <p class="form-control-static">商户状态</p>
+                            <select name="" id="" class="form-control">
+                                <option value="全部">全部</option>
+                                <option value="已开启">已开启</option>
+                                <option value="已冻结">已冻结</option>
+                            </select>
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
                     </div>
                     <!-- /.box-body -->
                 </form>
             </div>
 
             <div class="box box-solid">
-                <div class="box-body table-responsive">
+                <div class="box-body">
                     <div class="example">
                         <div class=" hidden-xs" id="exampleToolbar" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success">
-                                导出EXCEL
+                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
+                                保存设定
                             </a>
-
                         </div>
                         <table id="exampleTableToolbar" class="text-center table-hover table-striped">
                             <thead>
-                                <tr>
-                                    <th data-field="col-01">商品编号</th>
-                                    <th data-field="col-02">商品名称</th>
-                                    <th data-field="col-03">商品二级目录</th>
-                                    <th data-field="col-04">商品一级目录</th>
-                                    <th data-field="col-05">商品类型</th>
-                                    <th data-field="col-06">平台类型</th>
-                                    <th data-field="col-07">卡面值</th>
-                                    <th data-field="col-08">数量（张）</th>
-                                    <th data-field="col-09">折扣（%）</th>
-                                    <th data-field="col-10">进货价</th>
-                                    <th data-field="col-11">供货商</th>
-                                    <th data-field="col-12">过期时间</th>
-                                    <th data-field="col-13">导入时间</th>
-                                    <th data-field="col-14">操作</th>
-                                </tr>
+                            <tr>
+                                <th data-field="col-01">商户编号</th>
+                                <th data-field="col-02">用户名</th>
+                                <th data-field="col-03">商户名称</th>
+                                <th data-field="col-04">联系人</th>
+                                <th data-field="col-05">手机号码</th>
+                                <th data-field="col-06">商户状态</th>
+                                <th data-field="col-07">操作</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5132</td>
-                                    <td>绝地求生</td>
-                                    <td>绝地求生</td>
-                                    <td>Steam单机游戏</td>
-                                    <td>卡密直储</td>
-                                    <td>steam</td>
-                                    <td>98</td>
-                                    <td>2</td>
-                                    <td>100</td>
-                                    <td>88</td>
-                                    <td></td>
-                                    <td>2018-5-16</td>
-                                    <td>2018-5-16  24:15:16</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#viewModal">导入详情</button>
-                                    </td>
-                                </tr>
-
+                            <tr>
+                                <td>845613</td>
+                                <td>aksdjal</td>
+                                <td>牛牛</td>
+                                <td>方块</td>
+                                <td>19876838383</td>
+                                <td>已开启</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="无模板价">无模板价</option>
+                                        <option value="第一套">第一套</option>
+                                        <option value="第二套">第二套</option>
+                                        <option value="第三套">第三套</option>
+                                        <option value="第四套">第四套</option>
+                                        <option value="第五套">第五套</option>
+                                    </select>
+                                    <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>845613</td>
+                                <td>aksdjal</td>
+                                <td>牛牛</td>
+                                <td>方块</td>
+                                <td>19876838383</td>
+                                <td>已冻结</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="无模板价">无模板价</option>
+                                        <option value="第一套">第一套</option>
+                                        <option value="第二套">第二套</option>
+                                        <option value="第三套">第三套</option>
+                                        <option value="第四套">第四套</option>
+                                        <option value="第五套">第五套</option>
+                                    </select>
+                                    <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
-
                 </div>
             </div>
 
@@ -373,63 +332,180 @@
 
 </div>
 <!-- ./wrapper -->
-
-<!--修改库存-->
-<div class="modal" id="viewModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
+<!--密价设置弹窗-->
+<div class="modal" id="specialPrice" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document" style="width: 1200px;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">卡密详情</h4>
+                <h4 class="modal-title">密价设定</h4>
             </div>
             <div class="modal-body">
-                <div class="form-inline form-group">
-                    <p class="form-control-static">按卡号查询</p>
-                    <input type="text" class="form-control" placeholder="请输入搜索关键词">
-                    <button class="btn btn-danger">搜索</button>
+                <div class="box box-solid" style="margin-bottom: 1px;">
+                    <!-- /.box-header -->
+                    <div class="box-body form-inline">
+                        <div class="form-group margin-top-xs" style="margin-right: 20px;">
+                            商户名称：牛牛
+                        </div>
+                        <div class="form-group margin-top-xs" style="margin-right: 20px;">
+                            商户编号：12345
+                        </div>
+                        <div class="form-group margin-top-xs text-danger">
+                            注：价格设定保存后立即生效，请谨慎输入。
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
                 </div>
-                <table id="viewTable" class="text-center table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th data-field="col-01">卡号</th>
-                            <th data-field="col-02">密码</th>
-                            <th data-field="col-03">导入时间</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
-                        <tr>
-                            <td>9485612488454856</td>
-                            <td>845XXXXXXXX1234</td>
-                            <td>2018-5-16  24:15:16</td>
-                        </tr>
+                <div class="box box-solid">
+                    <!-- /.box-header -->
+                    <div class="box-body form-inline">
+                        <div class="form-group margin-top-xs">
+                            <select name="" id="" class="form-control">
+                                <option value="按条件查询">按条件查询</option>
+                                <option value="按商品编号">按商品编号</option>
+                                <option value="按商品名称">按商品名称</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="请输入搜索条件">
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <p class="form-control-static">按目录查询</p>
+                            <select name="" id="" class="form-control">
+                                <option value="一级目录">一级目录</option>
+                                <option value="目录一">目录一</option>
+                                <option value="目录二">目录二</option>
+                            </select>
+                            <select name="" id="" class="form-control">
+                                <option value="二级目录">二级目录</option>
+                                <option value="目录一">目录一</option>
+                                <option value="目录二">目录二</option>
+                            </select>
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <button class="btn btn-danger">搜索</button>
+                        </div>
+                    </div>
+                    <div class="box-body form-inline">
+                        <div class="form-group margin-top-xs">
+                            <p class="form-control-static">按面值批量设置密价：</p>
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <p class="form-control-static">面值<span class="text-danger">*</span></p>
+                            <input type="text" class="form-control">
+                            <p class="form-control-static">%</p>
+                        </div>
+                        <div class="form-group margin-top-xs">
+                            <button class="btn btn-primary">一键设置密价</button>
+                            <button class="btn btn-primary">一键恢复全部设置</button>
+                            <button class="btn btn-primary">保存设定</button>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <div class="box box-solid">
+                    <div class="example">
+                        <div class=" hidden-xs" id="exampleToolbar2" role="group">
+                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
+                                保存设定
+                            </a>
+                        </div>
+                        <table id="exampleTableToolbar2" class="text-center table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th data-field="col-01">商户编号</th>
+                                <th data-field="col-02">商品名称</th>
+                                <th data-field="col-03">一级目录</th>
+                                <th data-field="col-04">二级目录</th>
+                                <th data-field="col-05">商品类型</th>
+                                <th data-field="col-06">商品面值</th>
+                                <th data-field="col-07">自身进货价（元）</th>
+                                <th data-field="col-08">下级级别价（元）</th>
+                                <th data-field="col-09">当前模板价（元）</th>
+                                <th data-field="col-10">密价设定（元）</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>845613</td>
+                                <td>绝地求生</td>
+                                <td>目录一</td>
+                                <td>目录一二</td>
+                                <td>直储</td>
+                                <td>100</td>
+                                <td>98.00</td>
+                                <td>99.00</td>
+                                <td>99.00</td>
+                                <td>
+                                    <div class="form-inline">
+                                        <div class="form-group">面值<span class="text-danger">*</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                        </div>
+                                        <div class="form-group">% =</div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>845613</td>
+                                <td>绝地求生</td>
+                                <td>目录一</td>
+                                <td>目录一二</td>
+                                <td>直储</td>
+                                <td>100</td>
+                                <td>98.00</td>
+                                <td>99.00</td>
+                                <td>99.00</td>
+                                <td>
+                                    <div class="form-inline">
+                                        <div class="form-group">面值<span class="text-danger">*</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                        </div>
+                                        <div class="form-group">% =</div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>845613</td>
+                                <td>绝地求生</td>
+                                <td>目录一</td>
+                                <td>目录一二</td>
+                                <td>直储</td>
+                                <td>100</td>
+                                <td>98.00</td>
+                                <td>99.00</td>
+                                <td>99.00</td>
+                                <td>
+                                    <div class="form-inline">
+                                        <div class="form-group">面值<span class="text-danger">*</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                        </div>
+                                        <div class="form-group">% =</div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-sm" style="width: 50px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                    </tbody>
-                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--修改库存-->
+<!--密价设置弹窗-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -496,12 +572,13 @@
             buttonsAlign:'left',
             toolbarAlign:'right'
         });
-        $('#viewTable').bootstrapTable({
+        $('#exampleTableToolbar2').bootstrapTable({
             showColumns: true,
-            pagination:true,
+            toolbar: '#exampleToolbar2',
             icons: {
                 columns: 'glyphicon-list'
             },
+            pagination:true,
             sidePagination:'client',
             pageNumber:1,
             pageSize:10,
@@ -509,6 +586,24 @@
             toolbarAlign:'right'
         });
         //sweatalert
+        $('.freeze-button').click(function () {
+            swal({
+                    title: "确认冻结",
+                    text: "确定冻结选中的记录吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定冻结",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("冻结成功", "商户冻结成功", "success");
+                });
+        });
+        $(".save-button").click(function () {
+            swal({title: "保存成功", text: "商户价格保存成功", type: "success"})
+        });
 
 
     })
