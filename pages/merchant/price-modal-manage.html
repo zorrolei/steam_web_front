@@ -238,8 +238,8 @@
                                 <td>1</td>
                                 <td>第一套模板</td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#priceSetting">价格设定</button>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalMerchant">套用商户</button>
+                                  <a href="price-modal-manage-confirm.html" class="btn btn-primary btn-sm">价格设定</a>
+                                    <a href="price-modal-manage-used.html" class="btn btn-primary btn-sm">套用商户</a>
                                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">修改名称</button>
                                     <button class="btn btn-danger btn-sm del-button">删除</button>
                                 </td>
@@ -248,8 +248,8 @@
                                 <td>1</td>
                                 <td>第一套模板</td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#priceSetting">价格设定</button>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalMerchant">套用商户</button>
+                                  <a href="price-modal-manage-confirm.html" class="btn btn-primary btn-sm">价格设定</a>
+                                  <a href="price-modal-manage-used.html" class="btn btn-primary btn-sm">套用商户</a>
                                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">修改名称</button>
                                     <button class="btn btn-danger btn-sm del-button">删除</button>
                                 </td>
@@ -258,8 +258,8 @@
                                 <td>1</td>
                                 <td>第一套模板</td>
                                 <td>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#priceSetting">价格设定</button>
-                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalMerchant">套用商户</button>
+                                    <a href="price-modal-manage-confirm.html" class="btn btn-primary btn-sm">价格设定</a>
+                                  <a href="price-modal-manage-used.html" class="btn btn-primary btn-sm">套用商户</a>
                                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">修改名称</button>
                                     <button class="btn btn-danger btn-sm del-button">删除</button>
                                 </td>
@@ -327,285 +327,6 @@
 </div><!-- /.modal -->
 <!--添加新模板弹窗-->
 
-<!--价格设定-->
-<div class="modal" id="priceSetting" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document" style="width: 1200px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">下级模板价格设定</h4>
-            </div>
-            <div class="modal-body">
-                <div class="box box-solid">
-                    <!-- /.box-header -->
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <select name="" id="" class="form-control">
-                                <option value="按条件查询">按条件查询</option>
-                                <option value="按商品编号">按商品编号</option>
-                                <option value="按商品名称">按商品名称</option>
-                            </select>
-                            <input type="text" class="form-control" placeholder="请输入搜索条件">
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按目录查询</p>
-                            <select name="" id="" class="form-control">
-                                <option value="一级目录">一级目录</option>
-                                <option value="目录一">目录一</option>
-                                <option value="目录二">目录二</option>
-                            </select>
-                            <select name="" id="" class="form-control">
-                                <option value="二级目录">二级目录</option>
-                                <option value="目录一">目录一</option>
-                                <option value="目录二">目录二</option>
-                            </select>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
-                        </div>
-                    </div>
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按面值批量设置模板价：</p>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">面值<span class="text-danger">*</span></p>
-                            <input type="text" class="form-control">
-                            <p class="form-control-static">%</p>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-primary">一键设置模板价</button>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <div class="box box-solid">
-                    <div class="example">
-                        <div class=" hidden-xs" id="exampleToolbar2" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
-                                保存设定
-                            </a>
-                        </div>
-                        <table id="exampleTableToolbar2" class="text-center table-hover table-striped">
-                            <thead>
-                            <tr>
-                                <th data-field="col-01">商户编号</th>
-                                <th data-field="col-02">商品名称</th>
-                                <th data-field="col-03">一级目录</th>
-                                <th data-field="col-04">二级目录</th>
-                                <th data-field="col-05">商品类型</th>
-                                <th data-field="col-06">商品面值</th>
-                                <th data-field="col-07">自身进货价（元）</th>
-                                <th data-field="col-08">下级级别价（元）</th>
-                                <th data-field="col-10">密价设定（元）</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--价格设定-->
-
-<!--模板套用商户-->
-<div class="modal" id="modalMerchant" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document" style="width: 1200px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">第一套模板套用商户</h4>
-            </div>
-            <div class="modal-body">
-                <div class="box box-solid">
-                    <!-- /.box-header -->
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <select name="" id="" class="form-control">
-                                <option value="请选择查询条件">请选择查询条件</option>
-                                <option value="按商户编号">按商户编号</option>
-                                <option value="按用户名">按用户名</option>
-                                <option value="按商户名称">按商户名称</option>
-                                <option value="按联系人">按联系人</option>
-                                <option value="按手机号码">按手机号码</option>
-                            </select>
-                            <input type="text" class="form-control" placeholder="请输入搜索条件">
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">商户状态</p>
-                            <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="已开启">已开启</option>
-                                <option value="已冻结">已冻结</option>
-                            </select>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <div class="box box-solid">
-                    <div class="example">
-                        <div class=" hidden-xs" id="exampleToolbar3" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
-                                保存设定
-                            </a>
-                        </div>
-                        <table id="exampleTableToolbar3" class="text-center table-hover table-striped">
-                            <thead>
-                            <tr>
-                                <th data-field="col-01">商户编号</th>
-                                <th data-field="col-02">用户名</th>
-                                <th data-field="col-03">商户名称</th>
-                                <th data-field="col-04">联系人</th>
-                                <th data-field="col-05">手机号码</th>
-                                <th data-field="col-06">商户状态</th>
-                                <th data-field="col-07">账户余额（元）</th>
-                                <th data-field="col-08">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>845613</td>
-                                <td>aksdjal</td>
-                                <td>牛牛</td>
-                                <td>方块</td>
-                                <td>19876838383</td>
-                                <td>已开启</td>
-                                <td>30.00</td>
-                                <td>
-                                    <select name="" id="" class="form-control">
-                                        <option value="无模板">无模板</option>
-                                        <option selected="" value="第一套">第一套</option>
-                                        <option value="第二套">第二套</option>
-                                        <option value="第三套">第三套</option>
-                                        <option value="第四套">第四套</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>aksdjal</td>
-                                <td>牛牛</td>
-                                <td>方块</td>
-                                <td>19876838383</td>
-                                <td>已开启</td>
-                                <td>30.00</td>
-                                <td>
-                                    <select name="" id="" class="form-control">
-                                        <option value="无模板">无模板</option>
-                                        <option selected="" value="第一套">第一套</option>
-                                        <option value="第二套">第二套</option>
-                                        <option value="第三套">第三套</option>
-                                        <option value="第四套">第四套</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>aksdjal</td>
-                                <td>牛牛</td>
-                                <td>方块</td>
-                                <td>19876838383</td>
-                                <td>已开启</td>
-                                <td>30.00</td>
-                                <td>
-                                    <select name="" id="" class="form-control">
-                                        <option value="无模板">无模板</option>
-                                        <option selected="" value="第一套">第一套</option>
-                                        <option value="第二套">第二套</option>
-                                        <option value="第三套">第三套</option>
-                                        <option value="第四套">第四套</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--模板套用商户-->
 
 <!--修改模板名称弹窗-->
 <div class="modal" id="editModal" tabindex="-1" role="dialog">

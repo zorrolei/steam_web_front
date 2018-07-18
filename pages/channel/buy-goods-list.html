@@ -222,14 +222,16 @@
                 <form class="">
                     <div class="box-body form-inline">
                         <div class="form-group margin-top-xs">
-                            <select name="" id="" class="form-control">
-                                <option value="按条件搜索">按条件搜索</option>
-                                <option value="按商品名称搜索">按商品名称搜索</option>
-                                <option value="按目录搜索">按目录搜索</option>
-                            </select>
+                            <p class="form-control-static">按商品名称查询</p>
+                            <input type="text" class="form-control" placeholder="请输入搜索条件">
                         </div>
                         <div class="form-group margin-top-xs">
-                            <input type="text" class="form-control" placeholder="请输入搜索条件">
+                            <p class="form-control-static">供货方式</p>
+                            <select name="" id="" class="form-control">
+                                <option value="全部">全部</option>
+                                <option value="自上架">自上架</option>
+                                <option value="系统商品">系统商品</option>
+                            </select>
                         </div>
                         <div class="form-group margin-top-xs">
                             <button class="btn btn-danger">搜索</button>
@@ -268,7 +270,7 @@
                             <td>98</td>
                             <td>自上架</td>
                             <td>
-                                <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">购买商品</button>
+                                <a href="buy-goods-input.html" class="btn btn-primary btn-xs">购买商品</a>
                             </td>
                         </tr>
 

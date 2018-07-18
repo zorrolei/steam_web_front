@@ -271,7 +271,7 @@
                                     <td>1100.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>用户名为XXX的商户划拨给用户名为XXX的商户交易额度</td>
-                                    <td><a href="#" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#accountDetail">详情</button></td>
                                 </tr>
                                 <tr>
                                     <td>划拨交易额度</td>
@@ -281,7 +281,7 @@
                                     <td>1000.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>用户名为XXX的商户划拨给用户名为XXX的商户交易额度</td>
-                                    <td><a href="#" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#accountDetail">详情</button></td>
                                 </tr>
                                 <tr>
                                     <td>自充值消耗</td>
@@ -291,7 +291,7 @@
                                     <td>1500.00</td>
                                     <td>2018-05-15 23:16:15</td>
                                     <td>订单号为XXXXX</td>
-                                    <td><a href="#" class="btn btn-primary btn-xs">详情</a></td>
+                                    <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#accountDetail">详情</button></td>
                                 </tr>
 
                             </tbody>
@@ -321,7 +321,45 @@
 </div>
 <!-- ./wrapper -->
 
-
+<!--详情弹窗-->
+<div class="modal" id="accountDetail" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">账户金额变动明细详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>加减方式</strong></div>
+                        <div class="col-sm-8">加款</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>操作类型</strong></div>
+                        <div class="col-sm-8">后台财务加款</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>变动金额</strong></div>
+                        <div class="col-sm-8">100.00元</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>操作时间</strong></div>
+                        <div class="col-sm-8">2018-05-02 12:23:33</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 text-right"><strong>加款备注</strong></div>
+                        <div class="col-sm-8">艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士艺术硕士</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--详情弹窗-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>

@@ -508,12 +508,113 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#generateCDKDetail">确定</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!--生成CDK-->
+
+<!--生成CDK结果-->
+<div class="modal" id="generateCDKDetail" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CDK生成结果</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">商品名称</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="form-control-static">绝地求生</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">平台类型</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <p class="form-control-static">steam</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">生成结果</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <p class="form-control-static">成功</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">生成数量</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <p class="form-control-static">15</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">过期时间</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <p class="form-control-static">2018-05-06 24:15:16</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 text-right">
+                            <p class="form-control-static">生成内容</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="example">
+                                <div class=" hidden-xs" id="exampleToolbar2" role="group">
+                                    <a href="javascript:void(0);" type="button" class="btn btn-success">
+                                        导出EXCEL
+                                    </a>
+                                </div>
+                                <table id="exampleTableToolbar2" class="text-center table-hover table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="col-01">CDK编号</th>
+                                        <th data-field="col-02">CDK码</th>
+                                        <th data-field="col-03">生成时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>asdawsdasd</td>
+                                        <td>2018-05-06 24:15:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>asdawsdasd</td>
+                                        <td>2018-05-06 24:15:16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>asdawsdasd</td>
+                                        <td>2018-05-06 24:15:16</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--生成CDK结果-->
 
 
 <!-- jQuery 3 -->
@@ -591,6 +692,19 @@
         $('#exampleTableToolbar').bootstrapTable({
             showColumns: true,
             toolbar: '#exampleToolbar',
+            icons: {
+                columns: 'glyphicon-list'
+            },
+            pagination:true,
+            sidePagination:'client',
+            pageNumber:1,
+            pageSize:10,
+            buttonsAlign:'left',
+            toolbarAlign:'right'
+        });
+        $('#exampleTableToolbar2').bootstrapTable({
+            showColumns: true,
+            toolbar: '#exampleToolbar2',
             icons: {
                 columns: 'glyphicon-list'
             },

@@ -102,16 +102,16 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
                 <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li  class="active"><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
                         <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
-                        <li><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
+                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -141,7 +141,7 @@
                         <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-money"></i> <span>财务管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -149,7 +149,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="../../pages/finance/account-manage.html">账户管理</a></li>
-                        <li><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
+                        <li class="active"><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
                         <li><a href="../../pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
                         <li><a href="../../pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
                     </ul>
@@ -205,86 +205,77 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                购买游戏商品
+                账户金额充值管理
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品售卖渠道管理</li>
-                <li class="active">购买游戏商品</li>
+                <li>财务管理</li>
+                <li class="active">账户金额充值管理</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
-
-            <div class="box box-solid">
-                <!-- /.box-header -->
-                <form class="">
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按商品名称查询</p>
-                          <input type="text" class="form-control" placeholder="请输入搜索条件">
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </form>
-            </div>
-
             <div class="box box-solid">
                 <div class="box-body">
-                    <div class="form-horizontal">
+                    <div class="form-horizontal" style="padding-top: 30px;">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">平台类型</label>
-                            <div class="col-sm-10">
-                                <div class="row">
-                                    <div class="col-xs-2"><button class="btn btn-primary btn-block">Steam</button></div>
-                                    <div class="col-xs-2"><button class="btn btn-default btn-block">origin</button></div>
-                                </div>
+                            <div class="col-sm-3 text-right">充值账号</div>
+                            <div class="col-sm-8">asfasdfasdfasfasdfasdf</div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-3 text-right">支付方式</div>
+                            <div class="col-sm-8">在线银行支付</div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-3 text-right">
+                                <p class="form-control-static">付款银行</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="form-control-static">银行名称</p>
                             </div>
                         </div>
-                      <hr>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">一级目录</label>
-                            <div class="col-sm-10">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                </div>
+                            <div class="col-sm-3 text-right">
+                                <p class="form-control-static">充值金额</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="form-control-static">1000.00元</p>
                             </div>
                         </div>
-                      <hr>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">目录一</label>
-                            <div class="col-sm-10">
-                              <div class="row">
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                              </div>
+                            <div class="col-sm-3 text-right">
+                                <p class="form-control-static">手续费</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="form-control-static">5.00元</p>
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <div class="col-sm-3 text-right">
+                                <p class="form-control-static">支付金额</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="form-control-static">1005.00元</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-3 text-right">
+                                <p class="form-control-static">支付注意事项</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <ul class="text-danger" style="margin: 0;padding: 0;">
+                                    <li>在网银支付页面支付成功后，为避免您的资金不能及时到账，请勿手动关闭支付页面，等待页面跳转回本网站方可关闭。</li>
+                                    <li>如果支付成功后不小心关闭了支付页面，请等待2-15分钟再查看充值金额是否到账。</li>
+                                    <li>如果长时间未到账或有其他问题，请与本站客服联系。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-push-3">
+                                <a href="margin-manage-result.html" class="btn btn-primary" style="width: 100px">确认支付</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -308,8 +299,6 @@
 
 </div>
 <!-- ./wrapper -->
-
-
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -377,38 +366,9 @@
             toolbarAlign:'right'
         });
         //sweatalert
-        $('.delete-button').click(function () {
-            swal({
-                    title: "确认删除",
-                    text: "确定删除这条记录吗",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "取消",
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定删除",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("删除成功", "记录删除成功", "success");
-                });
-        });
-        $('.batch-delete-button').click(function () {
-            swal({
-                    title: "确认删除",
-                    text: "确定删除选中的记录吗",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "取消",
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定删除",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("删除成功", "记录删除成功", "success");
-                });
-        });
-        $(".mark-as-read").click(function () {
-            swal({title: "标记成功", text: "成功标记为已读", type: "success"})
+
+        $(".submit-button").click(function () {
+            swal({title: "支付成功", text: "本次成功支付1005.00元", type: "success"})
         });
 
     })

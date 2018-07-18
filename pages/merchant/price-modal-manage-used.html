@@ -102,19 +102,19 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
                 <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li  class="active"><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
                         <li><a href="../../pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
-                        <li><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
+                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -123,7 +123,7 @@
                     <ul class="treeview-menu">
                         <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
                         <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
-                        <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
+                        <li class="active"><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -205,90 +205,126 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                购买游戏商品
+                下级价格模板管理
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品售卖渠道管理</li>
-                <li class="active">购买游戏商品</li>
+                <li>下级商户管理</li>
+                <li class="active">下级价格模板管理</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
-
             <div class="box box-solid">
                 <!-- /.box-header -->
-                <form class="">
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按商品名称查询</p>
-                          <input type="text" class="form-control" placeholder="请输入搜索条件">
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
-                        </div>
+                <div class="box-body form-inline">
+                    <div class="form-group margin-top-xs">
+                        <select name="" id="" class="form-control">
+                            <option value="请选择查询条件">请选择查询条件</option>
+                            <option value="按商户编号">按商户编号</option>
+                            <option value="按用户名">按用户名</option>
+                            <option value="按商户名称">按商户名称</option>
+                            <option value="按联系人">按联系人</option>
+                            <option value="按手机号码">按手机号码</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="请输入搜索条件">
                     </div>
-                    <!-- /.box-body -->
-                </form>
+                    <div class="form-group margin-top-xs">
+                        <p class="form-control-static">商户状态</p>
+                        <select name="" id="" class="form-control">
+                            <option value="全部">全部</option>
+                            <option value="已开启">已开启</option>
+                            <option value="已冻结">已冻结</option>
+                        </select>
+                    </div>
+                    <div class="form-group margin-top-xs">
+                        <button class="btn btn-danger">搜索</button>
+                    </div>
+                </div>
+                <!-- /.box-body -->
             </div>
-
             <div class="box box-solid">
                 <div class="box-body">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">平台类型</label>
-                            <div class="col-sm-10">
-                                <div class="row">
-                                    <div class="col-xs-2"><button class="btn btn-primary btn-block">Steam</button></div>
-                                    <div class="col-xs-2"><button class="btn btn-default btn-block">origin</button></div>
-                                </div>
-                            </div>
+                    <div class="example">
+                        <div class=" hidden-xs" id="exampleToolbar3" role="group">
+                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
+                                保存设定
+                            </a>
                         </div>
-                      <hr>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">一级目录</label>
-                            <div class="col-sm-10">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                    <div class="col-md-2 col-sm-3 margin-bottom-xs"><button class="btn btn-default btn-block" >目录一</button></div>
-                                </div>
-                            </div>
-                        </div>
-                      <hr>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">目录一</label>
-                            <div class="col-sm-10">
-                              <div class="row">
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                                <div class="col-md-2 col-sm-3 margin-bottom-xs"><a href="./buy-goods-list.html" class="btn btn-default btn-block">目录二</a></div>
-                              </div>
-                            </div>
-                        </div>
-
+                        <table id="exampleTableToolbar3" class="text-center table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th data-field="col-01">商户编号</th>
+                                <th data-field="col-02">用户名</th>
+                                <th data-field="col-03">商户名称</th>
+                                <th data-field="col-04">联系人</th>
+                                <th data-field="col-05">手机号码</th>
+                                <th data-field="col-06">商户状态</th>
+                                <th data-field="col-07">账户余额（元）</th>
+                                <th data-field="col-08">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>845613</td>
+                                <td>aksdjal</td>
+                                <td>牛牛</td>
+                                <td>方块</td>
+                                <td>19876838383</td>
+                                <td>已开启</td>
+                                <td>30.00</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="无模板">无模板</option>
+                                        <option selected="" value="第一套">第一套</option>
+                                        <option value="第二套">第二套</option>
+                                        <option value="第三套">第三套</option>
+                                        <option value="第四套">第四套</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>845613</td>
+                                <td>aksdjal</td>
+                                <td>牛牛</td>
+                                <td>方块</td>
+                                <td>19876838383</td>
+                                <td>已开启</td>
+                                <td>30.00</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="无模板">无模板</option>
+                                        <option selected="" value="第一套">第一套</option>
+                                        <option value="第二套">第二套</option>
+                                        <option value="第三套">第三套</option>
+                                        <option value="第四套">第四套</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>845613</td>
+                                <td>aksdjal</td>
+                                <td>牛牛</td>
+                                <td>方块</td>
+                                <td>19876838383</td>
+                                <td>已开启</td>
+                                <td>30.00</td>
+                                <td>
+                                    <select name="" id="" class="form-control">
+                                        <option value="无模板">无模板</option>
+                                        <option selected="" value="第一套">第一套</option>
+                                        <option value="第二套">第二套</option>
+                                        <option value="第三套">第三套</option>
+                                        <option value="第四套">第四套</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- /.content -->
     </div>
@@ -376,11 +412,37 @@
             buttonsAlign:'left',
             toolbarAlign:'right'
         });
+        $('#exampleTableToolbar2').bootstrapTable({
+            showColumns: true,
+            toolbar: '#exampleToolbar2',
+            icons: {
+                columns: 'glyphicon-list'
+            },
+            pagination:true,
+            sidePagination:'client',
+            pageNumber:1,
+            pageSize:10,
+            buttonsAlign:'left',
+            toolbarAlign:'right'
+        });
+        $('#exampleTableToolbar3').bootstrapTable({
+            showColumns: true,
+            toolbar: '#exampleToolbar3',
+            icons: {
+                columns: 'glyphicon-list'
+            },
+            pagination:true,
+            sidePagination:'client',
+            pageNumber:1,
+            pageSize:10,
+            buttonsAlign:'left',
+            toolbarAlign:'right'
+        });
         //sweatalert
-        $('.delete-button').click(function () {
+        $('.del-button').click(function () {
             swal({
                     title: "确认删除",
-                    text: "确定删除这条记录吗",
+                    text: "确定删除此记录吗",
                     type: "warning",
                     showCancelButton: true,
                     cancelButtonText: "取消",
@@ -389,27 +451,16 @@
                     closeOnConfirm: false
                 },
                 function(){
-                    swal("删除成功", "记录删除成功", "success");
+                    swal("删除成功", "模板删除成功", "success");
                 });
         });
-        $('.batch-delete-button').click(function () {
-            swal({
-                    title: "确认删除",
-                    text: "确定删除选中的记录吗",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "取消",
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定删除",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("删除成功", "记录删除成功", "success");
-                });
+        $(".add-button").click(function () {
+            swal({title: "添加成功", text: "新模板添加成功", type: "success"})
         });
-        $(".mark-as-read").click(function () {
-            swal({title: "标记成功", text: "成功标记为已读", type: "success"})
+        $(".edit-button").click(function () {
+            swal({title: "修改成功", text: "模板名称修改成功", type: "success"})
         });
+
 
     })
 

@@ -252,6 +252,7 @@
                 <div class="box-body">
                     <div class="example">
                         <div class=" hidden-xs" id="exampleToolbar" role="group">
+                            <small class="text-danger">密价设定后优先取值为密价，请谨慎设置。</small>
                             <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
                                 保存设定
                             </a>
@@ -285,7 +286,7 @@
                                         <option value="第四套">第四套</option>
                                         <option value="第五套">第五套</option>
                                     </select>
-                                    <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                    <a href="merchant-price-setting-confirm.html" class="btn btn-primary btn-xs margin-bottom-xs">设置密价</a>
                                     <button class="btn btn-primary btn-xs margin-bottom-xs reset-price">清除密价</button>
                                 </td>
                             </tr>
@@ -305,7 +306,7 @@
                                         <option value="第四套">第四套</option>
                                         <option value="第五套">第五套</option>
                                     </select>
-                                    <button class="btn btn-primary btn-xs margin-bottom-xs" data-toggle="modal" data-target="#specialPrice">设置密价</button>
+                                    <a href="merchant-price-setting-confirm.html" class="btn btn-primary btn-xs margin-bottom-xs">设置密价</a>
                                   <button class="btn btn-primary btn-xs margin-bottom-xs reset-price">清除密价</button>
                                 </td>
                             </tr>
@@ -334,178 +335,6 @@
 
 </div>
 <!-- ./wrapper -->
-<!--密价设置弹窗-->
-<div class="modal" id="specialPrice" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document" style="width: 1200px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">密价设定</h4>
-            </div>
-            <div class="modal-body">
-                <div class="box box-solid" style="margin-bottom: 1px;">
-                    <!-- /.box-header -->
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs" style="margin-right: 20px;">
-                            商户名称：牛牛
-                        </div>
-                        <div class="form-group margin-top-xs" style="margin-right: 20px;">
-                            商户编号：12345
-                        </div>
-                        <div class="form-group margin-top-xs text-danger">
-                            注：价格设定保存后立即生效，请谨慎输入。
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <div class="box box-solid">
-                    <!-- /.box-header -->
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <select name="" id="" class="form-control">
-                                <option value="按条件查询">按条件查询</option>
-                                <option value="按商品编号">按商品编号</option>
-                                <option value="按商品名称">按商品名称</option>
-                            </select>
-                            <input type="text" class="form-control" placeholder="请输入搜索条件">
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按目录查询</p>
-                            <select name="" id="" class="form-control">
-                                <option value="一级目录">一级目录</option>
-                                <option value="目录一">目录一</option>
-                                <option value="目录二">目录二</option>
-                            </select>
-                            <select name="" id="" class="form-control">
-                                <option value="二级目录">二级目录</option>
-                                <option value="目录一">目录一</option>
-                                <option value="目录二">目录二</option>
-                            </select>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
-                        </div>
-                    </div>
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">按面值批量设置密价：</p>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">面值<span class="text-danger">*</span></p>
-                            <input type="text" class="form-control">
-                            <p class="form-control-static">%</p>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-primary">一键设置密价</button>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <div class="box box-solid">
-                    <div class="example">
-                        <div class=" hidden-xs" id="exampleToolbar2" role="group">
-                            <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
-                                保存设定
-                            </a>
-                        </div>
-                        <table id="exampleTableToolbar2" class="text-center table-hover table-striped">
-                            <thead>
-                            <tr>
-                                <th data-field="col-01">商户编号</th>
-                                <th data-field="col-02">商品名称</th>
-                                <th data-field="col-03">一级目录</th>
-                                <th data-field="col-04">二级目录</th>
-                                <th data-field="col-05">商品类型</th>
-                                <th data-field="col-06">商品面值</th>
-                                <th data-field="col-07">自身进货价（元）</th>
-                                <th data-field="col-08">下级级别价（元）</th>
-                                <th data-field="col-09">当前模板价（元）</th>
-                                <th data-field="col-10">密价设定（元）</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>845613</td>
-                                <td>绝地求生</td>
-                                <td>目录一</td>
-                                <td>目录一二</td>
-                                <td>直储</td>
-                                <td>100</td>
-                                <td>98.00</td>
-                                <td>99.00</td>
-                                <td>99.00</td>
-                                <td>
-                                    <div class="form-inline">
-                                        <div class="form-group">面值<span class="text-danger">*</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                        </div>
-                                        <div class="form-group">% =</div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control input-sm" style="width: 50px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--密价设置弹窗-->
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
