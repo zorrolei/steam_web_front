@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-
-
     <!-- bootstrap-table -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-table/dist/bootstrap-table.min.css">
     <!-- sweetalert -->
@@ -114,14 +112,14 @@
                         <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-group"></i> <span>下级商户管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
+                        <li><a href="../../pages/merchant/merchant-list.html">下级商户列表</a></li>
                         <li><a href="../../pages/merchant/merchant-price-setting.html">下级商户价格设置</a></li>
                         <li><a href="../../pages/merchant/price-modal-manage.html">下级价格模版管理</a></li>
                     </ul>
@@ -167,14 +165,14 @@
                         <li><a href="../../pages/order/order-cdk-fail.html">CDK充值掉单管理</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-key"></i> <span>充值码CDK管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="../../pages/cdk/cdk-manage-verification.html">CDK管理</a></li>
+                        <li class="active"><a href="../../pages/cdk/cdk-manage-verification.html">CDK管理</a></li>
                         <li><a href="../../pages/cdk/cdk-logs-verification.html">CDK生成记录</a></li>
                     </ul>
                 </li>
@@ -202,125 +200,26 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                下级商户列表
-            </h1>
-            <ol class="breadcrumb">
-                <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>下级商户管理</li>
-                <li class="active">下级商户列表</li>
-            </ol>
-        </section>
+
 
         <!-- Main content -->
         <section class="content container-fluid">
-
-            <div class="box box-solid">
-                <!-- /.box-header -->
-                <form class="">
-                    <div class="box-body form-inline">
-                        <div class="form-group margin-top-xs">
-                            <select name="" id="" class="form-control">
-                                <option value="请选择查询条件">请选择查询条件</option>
-                                <option value="按商户编号">按商户编号</option>
-                                <option value="按用户名">按用户名</option>
-                                <option value="按商户名称">按商户名称</option>
-                                <option value="按联系人">按联系人</option>
-                                <option value="按手机号码">按手机号码</option>
-                                <option value="按QQ">按QQ</option>
-                            </select>
-                            <input type="text" class="form-control" placeholder="请输入搜索条件">
+            <h2 class="text-center" style="margin-top: 100px; margin-bottom: 30px;">安全验证</h2>
+            <div class="row">
+                <div class="col-xs-6 col-xs-push-3">
+                    <div class="form-group">
+                        <p class="col-sm-3 form-control-static text-right">交易密码</p>
+                        <div class="col-sm-8 margin-bottom">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="请输入交易密码">
                         </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">商户状态</p>
-                            <select name="" id="" class="form-control">
-                              <option value="全部">全部</option>
-                              <option value="已开启">已开启</option>
-                              <option value="已冻结">已冻结</option>
-                            </select>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <p class="form-control-static">商户价格</p>
-                            <select name="" id="" class="form-control">
-                                <option value="全部">全部</option>
-                                <option value="已设置">已设置</option>
-                                <option value="未设置">未设置</option>
-                            </select>
-                        </div>
-                        <div class="form-group margin-top-xs">
-                            <button class="btn btn-danger">搜索</button>
+                        <div class="col-sm-12 text-center">
+                            <div class="form-group">
+                                <a href="cdk-manage.html" class="btn btn-primary" style="width: 160px">确定</a>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.box-body -->
-                </form>
-            </div>
-
-            <div class="box box-solid">
-                <div class="box-body">
-                    <table id="exampleTableToolbar" class="text-center table-hover table-striped">
-                        <thead>
-                        <tr>
-                            <th data-field="col-01">商户编号</th>
-                            <th data-field="col-02">用户名</th>
-                            <th data-field="col-03">商户名称</th>
-                            <th data-field="col-04">所在地区</th>
-                            <th data-field="col-05">联系人</th>
-                            <th data-field="col-06">手机号码</th>
-                            <th data-field="col-07">联系电话</th>
-                            <th data-field="col-08">QQ</th>
-                            <th data-field="col-09">详细联系地址</th>
-                            <th data-field="col-10">电子信箱</th>
-                            <th data-field="col-11">传真</th>
-                            <th data-field="col-12">店铺地址</th>
-                            <th data-field="col-13">商户状态</th>
-                            <th data-field="col-14">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>12345678</td>
-                            <td>aksdjal</td>
-                            <td>牛牛</td>
-                            <td>北京市朝阳区</td>
-                            <td>方块</td>
-                            <td>19876838383</td>
-                            <td>010-12345678</td>
-                            <td>741258963</td>
-                            <td>北京市朝阳区第一大马路</td>
-                            <td>741258963@qq.com</td>
-                            <td></td>
-                            <td>http://www.taobao.com</td>
-                            <td>已开启</td>
-                            <td>
-                                <button class="btn btn-primary btn-xs freeze-button">冻结</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>12345678</td>
-                            <td>aksdjal</td>
-                            <td>牛牛</td>
-                            <td>北京市朝阳区</td>
-                            <td>方块</td>
-                            <td>19876838383</td>
-                            <td>010-12345678</td>
-                            <td>741258963</td>
-                            <td>北京市朝阳区第一大马路</td>
-                            <td>741258963@qq.com</td>
-                            <td></td>
-                            <td>http://www.taobao.com</td>
-                            <td>已冻结</td>
-                            <td>
-                                <button class="btn btn-primary btn-xs thaw-read">开启</button>
-                            </td>
-                        </tr>
-
-                        </tbody>
-                    </table>
                 </div>
             </div>
-
         </section>
         <!-- /.content -->
     </div>
@@ -341,6 +240,99 @@
 </div>
 <!-- ./wrapper -->
 
+<!--生成CDK-->
+<div class="modal" id="generateCDK" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">生成CDK</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">选择商品类型</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <select name="" id="" class="form-control">
+                                <option value="商品类型">商品类型</option>
+                                <option value="直储">直储</option>
+                                <option value="卡密直储">卡密直储</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">选择商品一级目录</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <select name="" id="" class="form-control">
+                                <option value="商品目录">商品目录</option>
+                                <option value="商品目录">商品目录</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">选择商品二级目录</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <select name="" id="" class="form-control">
+                                <option value="商品目录">商品目录</option>
+                                <option value="商品目录">商品目录</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">选择商品名称</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <select name="" id="" class="form-control">
+                                <option value="商品名称">商品名称</option>
+                                <option value="商品名称">商品名称</option>
+                                <option value="商品名称">商品名称</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">生成数量</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" value="1" placeholder="生成数量">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-4">
+                            <p class="form-control-static text-danger">注：单次最多生成100个</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 text-right">
+                            <p class="form-control-static">过期时间</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="dataTimePicker" placeholder="请选择过期时间">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-push-4">
+                            <p class="form-control-static text-danger">注：超过过期时间后CDK自动失效</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--生成CDK-->
+
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -352,9 +344,6 @@
 <!-- date-range-picker -->
 <script src="../../bower_components/moment/min/moment.min.js"></script>
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-
-
 <!-- bootstrap-table -->
 <script src="../../bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="../../bower_components/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
@@ -393,6 +382,29 @@
             console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
         });
 
+        //datetimepicker
+        $('#dataTimePicker').daterangepicker({
+            "singleDatePicker": true,
+            "autoApply": true,
+            "timePicker": true,
+            "timePicker24Hour": true,
+            "timePickerSeconds": true,
+            locale : {
+                "format" : 'YYYY-MM-DD HH:mm:ss',
+                "separator" : " 至 ",//
+                "applyLabel" : "确定",
+                "cancelLabel" : "取消",
+                "fromLabel" : "起始时间",
+                "toLabel" : "结束时间'",
+                "customRangeLabel" : "自定义",
+                "weekLabel" : "W",
+                "daysOfWeek" : ["日", "一", "二", "三", "四", "五", "六"],
+                "monthNames" : ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                "firstDay" : 1
+            }
+        }, function(start, end, label) {
+            console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
         //data-table
         $('#exampleTableToolbar').bootstrapTable({
             showColumns: true,
@@ -408,10 +420,25 @@
             toolbarAlign:'right'
         });
         //sweatalert
-        $('.freeze-button').click(function () {
+        $('.batch-thawing').click(function () {
             swal({
-                    title: "确认冻结",
-                    text: "确定冻结选中的记录吗",
+                    title: "批量解冻",
+                    text: "确定解冻选中的CDK吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定解冻",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("解冻成功", "CDK解冻成功", "success");
+                });
+        });
+        $('.batch-freeze').click(function () {
+            swal({
+                    title: "批量冻结",
+                    text: "确定冻结选中的CDK吗",
                     type: "warning",
                     showCancelButton: true,
                     cancelButtonText: "取消",
@@ -420,14 +447,30 @@
                     closeOnConfirm: false
                 },
                 function(){
-                    swal("冻结成功", "商户冻结成功", "success");
+                    swal("冻结成功", "CDK冻结成功", "success");
                 });
         });
-        $(".thaw-read").click(function () {
-            swal({title: "解冻成功", text: "商户解冻成功", type: "success"})
+        $('.btn-freeze').click(function () {
+            swal({
+                    title: "冻结CDK",
+                    text: "确定冻结此CDK吗",
+                    type: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定冻结",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("冻结成功", "CDK冻结成功", "success");
+                });
         });
-
-
+        $(".batch-marked-as-sold").click(function () {
+            swal({title: "标记成功", text: "成功标记为已销售状态", type: "success"})
+        });
+        $(".marked-as-not-sold").click(function () {
+            swal({title: "标记成功", text: "成功标记为未销售状态", type: "success"})
+        });
     })
 
 
