@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Steam产品销售管理系统</title>
+    <title>产品销售管理系统</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
@@ -39,7 +39,7 @@
 
         <!-- Logo -->
         <a href="../../index.html" class="logo">
-            <span class="logo-mini"><b>S</b></span> <span class="logo-lg"><b>Steam</b>产品销售管理系统</span>
+            <span class="logo-mini"><b></b></span> <span class="logo-lg">产品销售管理系统</span>
         </a>
 
         <!-- Header Navbar -->
@@ -254,12 +254,13 @@
                         <div class=" hidden-xs" id="exampleToolbar" role="group">
                             <small class="text-danger">密价设定后优先取值为密价，请谨慎设置。</small>
                             <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
-                                保存设定
+                                批量保存设定
                             </a>
                         </div>
                         <table id="exampleTableToolbar" class="text-center table-hover table-striped">
                             <thead>
                             <tr>
+                                <th data-field="col-08" data-checkbox="true">商户编号</th>
                                 <th data-field="col-01">商户编号</th>
                                 <th data-field="col-02">用户名</th>
                                 <th data-field="col-03">商户名称</th>
@@ -271,6 +272,7 @@
                             </thead>
                             <tbody>
                             <tr>
+                                <td></td>
                                 <td>845613</td>
                                 <td>aksdjal</td>
                                 <td>牛牛</td>
@@ -291,6 +293,7 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td></td>
                                 <td>845613</td>
                                 <td>aksdjal</td>
                                 <td>牛牛</td>
@@ -312,6 +315,11 @@
                             </tr>
                             </tbody>
                         </table>
+                      <div class="text-right">
+                        <a href="javascript:void(0);" type="button" class="btn btn-success save-button">
+                          批量保存设定
+                        </a>
+                      </div>
                     </div>
                 </div>
             </div>
