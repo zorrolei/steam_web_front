@@ -11,12 +11,17 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+
+
     <!-- bootstrap-table -->
     <link rel="stylesheet" href="../../bower_components/bootstrap-table/dist/bootstrap-table.min.css">
     <!-- sweetalert -->
     <link rel="stylesheet" href="../../bower_components/sweetalert/sweetalert.css">
     <link rel="stylesheet" href="../../dist/css/skins/skin-red.min.css">
     <link rel="stylesheet" href="../../dist/css/style.css">
+
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
@@ -97,7 +102,7 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">产品导航</li>
                 <li><a href="../../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#"><i class="fa fa-tasks"></i> <span>商品售卖渠道管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -136,7 +141,7 @@
                         <li><a href="../../pages/goods/alarm-list.html">报警列表</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview active">
                     <a href="#"><i class="fa fa-money"></i> <span>财务管理</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -144,7 +149,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="../../pages/finance/account-manage.html">账户管理</a></li>
-<li><a href="../../pages/finance/account-verified.html">实名认证</a></li>
+                        <li class="active"><a href="../../pages/finance/account-verified.html">实名认证</a></li>
                         <li><a href="../../pages/finance/margin-manage.html">账户金额充值管理</a></li>
                         <li><a href="../../pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
                         <li><a href="../../pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
@@ -201,31 +206,82 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                接口相关设置
+                实名认证
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品售卖渠道管理</li>
-                <li class="active">接口相关设置</li>
+                <li>财务管理</li>
+                <li>实名认证</li>
+                <li class="active">审核结果</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
-            <div class="box box-solid">
-                <div class="box-body table-responsive">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">接口文档下载</label>
-                            <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary">点击下载接口文档</button>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">填写认证信息</h3>
+                        </div>
+                        <div class="box-body table-responsive">
+
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">商户名称</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">asdfasdf <span class="text-success"> 已通过 </span></p>
+                                        <p class="form-control-static">asdfasdf <span class="text-warning"> 待审核 </span></p>
+                                        <p class="form-control-static">asdfasdf <span class="text-danger"> 未通过 </span></p>
+                                        <p class="form-control-static"><span style="padding-right: 20px;">驳回原因：证件照不清晰</span> <a href="account-verified.html" class="btn btn-danger btn-sm">重新提交</a></p>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">商户类型</label>
+                                    <div class="col-md-4">
+                                        <p class="form-control-static">直销商</p>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">所在地区</label>
+                                    <div class="col-md-4">
+                                        <p class="form-control-static">石家庄-长安区</p>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">真实姓名</label>
+                                    <div class="col-md-4">
+                                        <p class="form-control-static">张三</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">身份证人像面</label>
+                                    <div class="col-md-4">
+                                        <img src="../../dist/img/photo1.png" style="width: 100%; max-width: 300px"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">身份证国徽面</label>
+                                    <div class="col-md-4">
+                                        <img src="../../dist/img/photo1.png" style="width: 100%; max-width: 300px"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">营业执照</label>
+                                    <div class="col-md-4">
+                                        <img src="../../dist/img/photo1.png" style="width: 100%; max-width: 300px"/>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
         <!-- /.content -->
     </div>
@@ -257,6 +313,9 @@
 <!-- date-range-picker -->
 <script src="../../bower_components/moment/min/moment.min.js"></script>
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+
+
 <!-- bootstrap-table -->
 <script src="../../bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
 <script src="../../bower_components/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
@@ -294,42 +353,40 @@
         }, function(start, end, label) {
             console.log('您选择的时间: ' + start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
         });
+
         //data-table
-        $('#exampleTableToolbar').bootstrapTable({
-            showColumns: true,
-            toolbar: '#exampleToolbar',
-            icons: {
-                columns: 'glyphicon-list'
-            },
-            pagination:true,
-            sidePagination:'client',
-            pageNumber:1,
-            pageSize:10,
-            buttonsAlign:'left',
-            toolbarAlign:'right'
-        });
+
         //sweatalert
-        $('.delete-button').click(function () {
-            swal({
-                    title: "确认删除",
-                    text: "确定删除这条记录吗",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "取消",
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定删除",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("删除成功", "店铺删除成功", "success");
-                });
+
+        $(".submit-button").click(function () {
+            swal({title: "支付成功", text: "本次成功支付1005.00元", type: "success"})
         });
-        $(".not-expired").click(function () {
-            swal({title: "账号未过期，请勿操作", text: "", type: "warning"})
-        });
+
     })
 
 
+</script>
+<script>
+    // 实现多个模态框
+    $(document).on('show.bs.modal', '.modal', function(event) {
+        $(this).appendTo($('body'));
+    }).on('shown.bs.modal', '.modal.in', function(event) {
+        setModalsAndBackdropsOrder();
+    }).on('hidden.bs.modal', '.modal', function(event) {
+        setModalsAndBackdropsOrder();
+    });
+
+
+    function setModalsAndBackdropsOrder() {
+        var modalZIndex = 1040;
+        $('.modal.in').each(function(index) {
+            var $modal = $(this);
+            modalZIndex++;
+            $modal.css('zIndex', modalZIndex);
+            $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
+        });
+        $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
+    }
 </script>
 </body>
 </html>

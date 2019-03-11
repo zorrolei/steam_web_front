@@ -104,9 +104,9 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li ><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
-                        <li><a href="../../pages/channel/store-select.html">淘宝天猫店铺授权</a></li>
-                        <li class="active"><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
+                        <li><a href="../../pages/channel/buy-goods.html">购买游戏商品</a></li>
+                        <li class="active"><a href="../../pages/channel/store-select.html">淘宝天猫店铺授权</a></li>
+                        <li><a href="../../pages/channel/api-setting.html">接口相关设置</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -201,29 +201,45 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                接口相关设置
+                集市宝授权
             </h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-dashboard"></i> 首页</li>
-                <li>商品售卖渠道管理</li>
-                <li class="active">接口相关设置</li>
+                <li>商品管理</li>
+                <li>淘宝天猫店铺授权</li>
+                <li class="active">集市宝授权</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
+
             <div class="box box-solid">
-                <div class="box-body table-responsive">
+                <!-- /.box-header -->
+                <div class="box-body" style="padding-top: 100px;">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">接口文档下载</label>
-                            <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary">点击下载接口文档</button>
+                            <label for="inputEmail3" class="col-sm-3 control-label">Access Key</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="请输入Access Key">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Secret Key</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="请输入Secret Key">
+                                <span id="helpBlock" class="help-block">注：修改后需要重新验证授权，请不要轻易点击。</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <a href="store-jishibao-edit.html" type="submit" class="btn btn-primary">保存</a>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <!-- /.box-body -->
             </div>
 
         </section>
@@ -271,7 +287,7 @@
             "timePicker24Hour": true,
             "timePickerSeconds": true,
             locale : {
-                "format" : 'YYYY-MM-DD HH:mm:ss',
+                "format" : 'YYYY-MM-DD',
                 "separator" : " 至 ",//
                 "applyLabel" : "确定",
                 "cancelLabel" : "取消",
@@ -309,23 +325,8 @@
             toolbarAlign:'right'
         });
         //sweatalert
-        $('.delete-button').click(function () {
-            swal({
-                    title: "确认删除",
-                    text: "确定删除这条记录吗",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: "取消",
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "确定删除",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("删除成功", "店铺删除成功", "success");
-                });
-        });
-        $(".not-expired").click(function () {
-            swal({title: "账号未过期，请勿操作", text: "", type: "warning"})
+        $('.submit-button').click(function () {
+            swal("授权成功", "店铺授权成功", "success");
         });
     })
 

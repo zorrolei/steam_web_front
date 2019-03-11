@@ -100,7 +100,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/channel/buy-goods.html">购买游戏商品</a></li>
-            <li><a href="pages/channel/tmall-list.html">淘宝天猫店铺列表</a></li>
+            <li><a href="pages/channel/store-select.html">淘宝天猫店铺授权</a></li>
             <li><a href="pages/channel/api-setting.html">接口相关设置</a></li>
           </ul>
         </li>
@@ -139,6 +139,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/finance/account-manage.html">账户管理</a></li>
+<li><a href="pages/finance/account-verified.html">实名认证</a></li>
             <li><a href="pages/finance/margin-manage.html">账户金额充值管理</a></li>
             <li><a href="pages/finance/transaction-amount-manage.html">系统商品提成记录</a></li>
             <li><a href="pages/finance/transaction-change-logs.html">账户金额变动明细</a></li>
@@ -287,11 +288,11 @@
         <!-- /.col -->
       </div>
 
-      <div class="box box-danger collapsed-box" style="position: absolute;right: 20px;bottom: 40px; width: 400px;">
+      <div class="box box-danger collapsed-box" style="position: absolute;right: 20px;bottom: 40px; width: 300px;">
         <div class="box-header with-border" data-widget="collapse" style="cursor:pointer;">
-          <h3 class="box-title">报警提示</h3>
+          <h3 class="box-title">库存报警</h3>
           <div class="box-tools pull-right">
-            <span data-toggle="tooltip" class="badge bg-red">5</span>
+            <span data-toggle="tooltip" class="badge badge-danger">5</span>
             <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
           </div>
         </div><!-- /.box-header -->
@@ -313,6 +314,25 @@
               <small>您的商品编号为12345的绝地求生卡密库存不足，请及时补充 <a href="pages/goods/alarm-list.html">查看</a></small>
             </div>
 
+          </div>
+        </div><!-- /.box-body -->
+        <div class="box-footer text-center">
+          <a href="pages/goods/alarm-list.html" class="btn btn-default btn-flat">查看全部</a>
+        </div>
+      </div>
+      <div class="box box-danger collapsed-box" style="position: absolute;right: 330px;bottom: 40px; width: 300px;">
+        <div class="box-header with-border" data-widget="collapse" style="cursor:pointer;">
+          <h3 class="box-title">金额报警</h3>
+          <div class="box-tools pull-right">
+            <span data-toggle="tooltip" class="badge bg-red">1</span>
+            <button class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+          </div>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <div class="direct-chat-messages">
+            <div class="callout callout-danger no-margin" style="margin-bottom: 10px;">
+              <small>您的账号为XXXX的账号金额已不足，请及时充值 <a href="pages/goods/alarm-list.html">查看</a></small>
+            </div>
           </div>
         </div><!-- /.box-body -->
         <div class="box-footer text-center">
