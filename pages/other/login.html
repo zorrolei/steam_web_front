@@ -32,11 +32,11 @@
 <body class="hold-transition login-page" style="background: url('../../dist/img/photo2.png'); background-repeat:no-repeat; background-size:cover;">
 <div class="login-box">
     <div class="login-logo">
-        <b>Steam</b>产品销售管理
+        产品销售管理
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">系统登录</p>
+        <p class="login-box-msg" style="position: relative;"><a href="#" data-toggle="modal" data-target="#reNotification" style="position: absolute; right: 0;"><i class="fa fa-qq"></i> 商务洽谈</a>系统登录</p>
 
         <form action="../../index.html" method="post" class="form-horizontal">
             <div class="form-group">
@@ -61,11 +61,6 @@
 
                 </div>
             </div>
-            <div class="form-group">
-                <p class="form-control-static text-center">如登录失败请联系客服电话：XXXXXXXXXXXX</p>
-            </div>
-
-
 
             <div class="row" style="margin-top: 20px;">
                 <div class="col-xs-6">
@@ -84,7 +79,67 @@
     <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
+<!-- 重新通知 -->
+<div class="modal" id="reNotification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">商务洽谈</h4>
+            </div>
+            <div class="modal-body">
+                <h5 style="margin-bottom: 20px;">我们致力于成为国内单机版游戏综合平台，为渠道解决全方位的进货与供货问题。<br>希望和您建立长久的业务关系，期待您的加入！</h5>
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">平台优势</h3>
+                    </div>
+                    <div class="box-body">
+                        <ol>
+                            <li>支持多个单机版平台系列游戏自动购买流程（如Steam、0rigin）</li>
+                            <li>开放api接口，可直接完成平台和商家天猫店铺对接，减少二次库存占压</li>
+                            <li>货源多项选择，可使用自有货源及平台官方货源</li>
+                            <li>提供销售渠道，可直接将产品货源供货至第三方销售平台</li>
+                            <li>官方产品价格变动，可实现店铺产品价格自动对应调整</li>
+                            <li>完善的经销商体系，产品利润清晰展现</li>
+                            <li>平台提供专业服务器支撑，不需要额外搭建</li>
+                        </ol>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">商务洽谈</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-4">QQ：577622691高先生</div>
+                            <div class="col-xs-4">QQ：273995558赵女士</div>
+                            <div class="col-xs-4">QQ：370727517张先生</div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
 
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">售后服务</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-4">QQ：794156154</div>
+                            <div class="col-xs-4">QQ：2449619244</div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-xs-4">联系电话：19955537913</div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 重新通知 -->
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
